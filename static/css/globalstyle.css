@@ -1,0 +1,230 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Calibri, Verdana, 'Sedgwick Ave', sans-serif;
+}
+
+html, body{
+    height: auto;
+}
+
+body.preload *{
+    animation-duration: 0s !important;
+}
+
+.background{
+    background: url(../images/newback.png);
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1280px;
+    height: 100%;
+    box-shadow: 0px 0px 40px;
+    padding: 10px 0;
+    background-color: #fff7fe;
+}
+
+.clear{
+    clear: both;
+}
+
+.button{
+    background: #FFE6F4;
+    color: black;
+    padding: 7px 25px;
+    border: 3px solid #FFBDE1;
+    animation-name: contrastOut;
+    animation-duration: 0.1s;
+}
+
+.button:hover{
+    animation-name: contrastIn;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+.box{
+    padding: 10px;
+    border-bottom: 1px solid pink;
+}
+
+.bounce{
+    display: inline-block;
+}
+
+/*HEADER*/
+header{
+    text-align: center;
+}
+
+header nav{
+    background: linear-gradient(#FFBACD, #FC86AA);
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+header img.logo{
+    height: 256px;
+}
+
+header img.logo:hover{
+    animation: zoom .7s forwards;
+}
+
+header img.chibi{
+    height: 128px;
+    animation-name: contrastOut;
+    animation-duration: 0.1s;
+}
+
+header img.chibi:hover{
+    animation-name: contrastIn;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+header ul{
+    display: inline-block;
+}
+
+header ul li{
+    display: inline-block;
+    margin-right: 40px;
+}
+
+header ul li:last-child{
+    margin: 0;
+}
+
+/*HEADER*/
+
+
+/*ASIDE*/
+aside{
+    margin-top: 50px;
+    display: inline-block;
+    width: 12%;
+    vertical-align: top;
+    text-align: center;
+}
+
+aside h2{
+    text-transform: uppercase;
+}
+
+aside ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+aside ul li{
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+aside ul li a{
+    text-decoration: none;
+    display: block;
+}
+/*ASIDE*/
+
+
+/*SECTION MAIN*/
+section.main{
+    display: inline-block;
+    width: 87%;
+}
+
+section.main p.text{
+    text-align: justify;
+    font-size: 24px;
+    display: none;
+    width: 35%;
+    vertical-align: top;
+    animation: fadeIn 2.5s forwards;
+}
+
+section.main img#girls{
+    margin-left: 150px;
+}
+
+
+/*SECTION MAIN*/
+
+
+/*ANIMATION*/
+@keyframes contrastIn{
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.3);
+    }
+}
+
+@keyframes contrastOut{   
+    0%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes slideToRight{
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(33.8%);  /*45.3%*/
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes bounce{
+    0%, 100%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-30px);
+    }
+    
+}
+
+@keyframes zoom{
+    0%, 50%, 100%{
+        transform: scale(1);
+    }
+
+    25%{
+        transform: scale(1.2);
+    }
+
+    75%{
+        transform: scale(1.1);
+    }
+}
+
+/*ANIMATION*/
