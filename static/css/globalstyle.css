@@ -11,6 +11,7 @@ html, body{
 
 body.preload *{
     animation-duration: 0s !important;
+    scroll-behavior: smooth;
 }
 
 .background{
@@ -114,17 +115,17 @@ aside h2{
     text-transform: uppercase;
 }
 
-aside ul{
+aside ul.aside-poems{
     display: inline-block;
     list-style-type: none;
 }
 
-aside ul li{
+aside ul.aside-poems li{
     font-size: 20px;
     margin-top: 30px;
 }
 
-aside ul li a{
+aside ul.aside-poems li a{
     text-decoration: none;
     display: block;
 }
@@ -143,15 +144,20 @@ section.main p.text{
     display: none;
     width: 35%;
     vertical-align: top;
-    animation: fadeIn 2.5s forwards;
 }
 
 section.main img#girls{
     margin-left: 150px;
 }
-
-
 /*SECTION MAIN*/
+
+/*SECTION POEMS*/
+section.poems{
+    display: none;
+    text-align: justify;
+    font-size: 24px;
+}
+/*SECTION POEMS*/
 
 
 /*ANIMATION*/
@@ -180,7 +186,7 @@ section.main img#girls{
     }
 
     100%{
-        transform: translateX(33.8%);  /*45.3%*/
+        transform: translateX(33.8%);
     }
 }
 
@@ -201,6 +207,7 @@ section.main img#girls{
         opacity: 0;
     }
 }
+
 
 @keyframes bounce{
     0%, 100%{

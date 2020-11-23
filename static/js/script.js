@@ -14,6 +14,10 @@ window.onload = function(){
     const text = document.getElementById('text');
     const contentMain = document.getElementById('main');
     const bounce = document.getElementById('bounce');
+    const monikaPoems = document.getElementById('monikaPoems');
+    const poems = document.getElementById('poems');
+
+
 
     const girlsText = 'Doki Doki Literature Club! é um jogo eletrônico de visual novel desenvolvida pela Team Salvato. Foi lançado em 22 de setembro de 2017 para Microsoft Windows, macOS, e Linux, e mais tarde em 6 de outubro para a Steam. A história segue um aluno do ensino médio que se junta ao Clube de Literatura da escola e interage com quatro garotas. O jogo apresenta uma história principalmente linear, com algumas cenas e finais alternativos dependendo das escolhas que o jogador faz. O jogo começa com você conhecendo Sayori, uma garota que você conhece como uma amiga de longa data';
 
@@ -25,18 +29,30 @@ window.onload = function(){
 
     const yuriText = 'Yuri é retratada durante a maior parte do jogo como sendo tímida, generosa, educada, muito inteligente, madura, eloquente e apaixonada por tópicos pelos quais se interessa, embora ela também seja muito insegura. Sua fachada de passividade e tontura ocasionalmente quebra, no entanto, como Yuri discute apaixonadamente e agressivamente com Natsuki sobre suas opiniões divergentes sobre estilos de escrita. <br/> <br/> Yuri tem um profundo desejo de ser apreciada pelos outros e tem medo de falar o que pensa sobre assuntos, pois acredita que isso fará com que ela pareça improvável. Devido à sua inaptidão social, ela pode ser inocentemente insensível, mas uma vez que percebe o que disse ser considerado rude, quase imediatamente pede desculpas, repetidamente dizendo que não quis dizer isso. Como afirma o protagonista, Yuri gosta de pensar antes de dizer algo.';
 
+
+    //
+
     girls.addEventListener('mouseenter', function(){
         girls.style.animationName='slideToRight';
         girls.style.animationDuration='1s';
-        girls.style.animationFillMode='backwards'; 
+        girls.style.animationFillMode='backwards';
+
+        setTimeout(function(){
+            girls.style.animationDuration='0';
+        }, 1200);
     });
     
     girls.addEventListener('animationend', function(){
         text.style.display='inline-block';
         girls.style.marginLeft='0'
+        text.style.animationName='fadeIn';
+        text.style.animationDuration='2.5s';
+        text.style.animationFillMode='forwads';
+        text.innerHTML = girlsText;
     });
 
     logo.addEventListener('click', function(){
+        contentMain.style.display='inline-block';
         contentMain.style.animationName='fadeOut';
         contentMain.style.animationDuration='.5s';
         contentMain.style.animationFillMode='forwards';
@@ -58,6 +74,7 @@ window.onload = function(){
         background.style.background = 'url(static/images/monikabg.png)';
 
         setTimeout(function(){
+            contentMain.style.display='inline-block';
             text.style.marginRight='80px';
             text.innerHTML = monikaText;
             contentMain.style.animationName='fadeIn';
@@ -66,6 +83,7 @@ window.onload = function(){
     });
 
     chibiSayori.addEventListener('click', function(){
+        contentMain.style.display='inline-block';
         contentMain.style.animationName='fadeOut';
         contentMain.style.animationDuration='.5s';
         contentMain.style.animationFillMode='forwards';
@@ -81,6 +99,7 @@ window.onload = function(){
     });
 
     chibiNatsuki.addEventListener('click', function(){
+        contentMain.style.display='inline-block';
         contentMain.style.animationName='fadeOut';
         contentMain.style.animationDuration='.5s';
         contentMain.style.animationFillMode='forwards';
@@ -96,6 +115,7 @@ window.onload = function(){
     });
 
     chibiYuri.addEventListener('click', function(){
+        contentMain.style.display='inline-block';
         contentMain.style.animationName='fadeOut';
         contentMain.style.animationDuration='.5s';
         contentMain.style.animationFillMode='forwards';
@@ -119,4 +139,20 @@ window.onload = function(){
             bounce.style.animationName='';
         }, 1050);
     });
+
+    monikaPoems.addEventListener('click', function(){
+        //Code;
+    });
+
+    monikaPoems.addEventListener('click', function(){
+        poems.scrollIntoView(); //Poems Scrolling;
+    });
+
+    setTimeout(function(){
+        background.style.filter='invert(100%)';
+    }, 10000);
+    setTimeout(function(){
+        background.style.filter='invert(0%)';
+    }, 10150);
+
 };
