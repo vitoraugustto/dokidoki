@@ -30,8 +30,6 @@ window.onload = function(){
     const yuriText = 'Yuri é retratada durante a maior parte do jogo como sendo tímida, generosa, educada, muito inteligente, madura, eloquente e apaixonada por tópicos pelos quais se interessa, embora ela também seja muito insegura. Sua fachada de passividade e tontura ocasionalmente quebra, no entanto, como Yuri discute apaixonadamente e agressivamente com Natsuki sobre suas opiniões divergentes sobre estilos de escrita. <br/> <br/> Yuri tem um profundo desejo de ser apreciada pelos outros e tem medo de falar o que pensa sobre assuntos, pois acredita que isso fará com que ela pareça improvável. Devido à sua inaptidão social, ela pode ser inocentemente insensível, mas uma vez que percebe o que disse ser considerado rude, quase imediatamente pede desculpas, repetidamente dizendo que não quis dizer isso. Como afirma o protagonista, Yuri gosta de pensar antes de dizer algo.';
 
 
-    //
-
     girls.addEventListener('mouseenter', function(){
         girls.style.animationName='slideToRight';
         girls.style.animationDuration='1s';
@@ -142,10 +140,6 @@ window.onload = function(){
 
     monikaPoems.addEventListener('click', function(){
         //Code;
-    });
-
-    monikaPoems.addEventListener('click', function(){
-        poems.scrollIntoView(); //Poems Scrolling;
     });
 
     setTimeout(function(){
