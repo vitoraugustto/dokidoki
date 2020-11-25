@@ -27,10 +27,6 @@ body.preload *{
     background-color: #fff7fe;
 }
 
-.clear{
-    clear: both;
-}
-
 .button{
     background: #FFE6F4;
     color: black;
@@ -46,12 +42,11 @@ body.preload *{
     animation-fill-mode: forwards;
 }
 
-.box{
-    border-bottom: 1px solid pink;
-    text-align: center;
+.bounce{
+    display: inline-block;
 }
 
-.bounce{
+.sections{
     display: inline-block;
 }
 
@@ -134,17 +129,18 @@ aside ul.aside-poems li{
 /*SECTION MAIN*/
 section.main{
     display: inline-block;
+    text-align: center;
     padding: 10px 30px;
     width: 100%;
+    border-bottom: 1px solid pink;
 }
 
 section.main p.text{
-    margin-top: 50px;
     text-align: justify;
     font-size: 24px;
-    display: none;
-    width: 40%;
     vertical-align: top;
+    display: inline-block;
+
     /*
     background: #FFE6F4;
     color: black;
@@ -153,10 +149,52 @@ section.main p.text{
     */
 }
 
-section.main img#girls{
-    max-height: 800px;
-    /*margin-left: 150px;*/
+section.main img.girls{
+    height: 100%;
+    width: 100%;
 }
+
+section.main img.girlsM{
+    height: 100%;
+    width: 100%;
+}
+
+section.main img.girlsS{
+    height: 100%;
+    width: 100%;
+}
+
+section.main img.girlsN{
+    height: 100%;
+    width: 100%;
+}
+
+section.main img.girlsY{
+    height: 100%;
+    width: 100%;
+}
+
+section.main #sectionMonika{
+    height: 0px;
+    width: 0px;
+}
+
+section.main #sectionSayori{
+    height: 0px;
+    width: 0px;
+}
+
+section.main #sectionNatsuki{
+    height: 0px;
+    width: 0px;
+}
+
+section.main #sectionYuri{
+    height: 0px;
+    width: 0px;
+}
+
+
 /*SECTION MAIN*/
 
 /*SECTION POEMS*/
@@ -188,13 +226,53 @@ section.poems{
     }
 }
 
-@keyframes slideToRight{
+@keyframes slideToRightGirls{
     0%{
         transform: translateX(0%);
     }
 
     100%{
-        transform: translateX(35%);
+        transform: translateX(35.9%);
+    }
+}
+
+@keyframes slideToRightMonika{
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(55.8%);
+    }
+}
+
+@keyframes slideToRightSayori{
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(81.8%);
+    }
+}
+
+@keyframes slideToRightNatsuki{
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(82.8%);
+    }
+}
+
+@keyframes slideToRightYuri{
+    0%{
+        transform: translateX(0%);
+    }
+
+    100%{
+        transform: translateX(67%);
     }
 }
 
@@ -241,5 +319,7 @@ section.poems{
         transform: scale(1.1);
     }
 }
+
+
 
 /*ANIMATION*/
