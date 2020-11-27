@@ -3,6 +3,8 @@ window.onload = function(){
     setTimeout(function(){
         document.body.className="";
     }, 80);
+
+
     
     const background = document.getElementById('bg');
     const chibiMonika = document.getElementById('chibi-monika');
@@ -48,22 +50,29 @@ window.onload = function(){
     const yuriText1 = 'Yuri é retratada durante a maior parte do jogo como sendo tímida, generosa, educada, muito inteligente, madura, eloquente e apaixonada por tópicos pelos quais se interessa, embora ela também seja muito insegura. Sua fachada de passividade e tontura ocasionalmente quebra, no entanto, como Yuri discute apaixonadamente e agressivamente com Natsuki sobre suas opiniões divergentes sobre estilos de escrita. <br/> <br/> Yuri tem um profundo desejo de ser apreciada pelos outros e tem medo de falar o que pensa sobre assuntos, pois acredita que isso fará com que ela pareça improvável. Devido à sua inaptidão social, ela pode ser inocentemente insensível, mas uma vez que percebe o que disse ser considerado rude, quase imediatamente pede desculpas, repetidamente dizendo que não quis dizer isso. Como afirma o protagonista, Yuri gosta de pensar antes de dizer algo.';
 
 
+
     girls.addEventListener('mouseenter', function(){
+
         girls.style.animationName='slideToRightGirls';
         girls.style.animationDuration='.5s';
         girls.style.animationFillMode='backwards';
     });
-
+    
     girls.addEventListener('animationend', function(){
-        girlsText.innerHTML=girlsText1;
 
+        girlsText.innerHTML=girlsText1;
         girlsText.style.animationName='fadeIn';
         girlsText.style.animationDuration='2.5s';
         girlsText.style.animationFillMode='backwards';
         girlsText.style.width='40%';
-    });
+    });  
 
+    var girlsState = false;
+    
     logo.addEventListener('click', function(){
+        girlsState = true;
+
+
         contentMain.style.animationName='fadeOut';
         contentMain.style.animationDuration='.5s';
         contentMain.style.animationFillMode='forwards';
@@ -111,11 +120,21 @@ window.onload = function(){
                 girlsN[i].style.width='0';
             };
 
-            setInterval(function(){
-                girls.style.animationName='';
-            }, 10)
+            for (var i = 0; i < girlsY.length; i++){
+                girlsY[i].style.height='0',
+                girlsY[i].style.width='0';
+            };
+
+            girlsLogoState();
+
         }, 600)
     });
+
+    function girlsLogoState(){
+        if(girlsState == true){
+            girls.style.animationDuration='0s';
+        };
+    };
 
     chibiMonika.addEventListener('click', function(){
         contentMain.style.animationName='fadeOut';
