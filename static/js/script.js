@@ -80,6 +80,13 @@ window.onload = function(){
         background.style.background = 'url(static/images/newback.png)';
 
         setTimeout(function(){
+            girlsText.style.fontSize='24px';
+            monikaText.style.fontSize='0px';
+            sayoriText.style.fontSize='0px';
+            natsukiText.style.fontSize='0px';
+            yuriText.style.fontSize='0px';
+
+
             contentMain.style.animationName='fadeIn';
 
             sectionGirls.style.height='auto';
@@ -136,14 +143,39 @@ window.onload = function(){
         };
     };
 
+
+    var counter = 0
     chibiMonika.addEventListener('click', function(){
+        counter += 1;
+
+        //console.log(counter);
+
+        function verifyCounter(){
+            if(counter >= 2){
+                monikaText.innerHTML=monikaText1;
+
+                sectionMonika.style.animation='fadeOut';
+
+
+                monikaText.style.width='40%';
+                monika.style.marginTop='-38.4px';
+            };
+        };
+
+        verifyCounter();
+
         contentMain.style.animationName='fadeOut';
         contentMain.style.animationDuration='.5s';
         contentMain.style.animationFillMode='forwards';
-
         background.style.background = 'url(static/images/monikabg.png)';
 
         setTimeout(function(){
+            girlsText.style.fontSize='0px';
+            monikaText.style.fontSize='24px';
+            sayoriText.style.fontSize='0px';
+            natsukiText.style.fontSize='0px';
+            yuriText.style.fontSize='0px';
+
             contentMain.style.animationName='fadeIn';
 
             sectionGirls.style.height='0px';
@@ -192,16 +224,20 @@ window.onload = function(){
         monika.style.animationDuration='.5s';
         monika.style.animationFillMode='backwards';
     });
-    
-    monika.addEventListener('animationend', function(){
-        monikaText.innerHTML=monikaText1;
-        monikaText.style.animationName='fadeIn';
-        monikaText.style.animationDuration='2.5s';
-        monikaText.style.animationFillMode='backwards';
-        monikaText.style.width='40%';
-        monika.style.marginTop='-38.4px';
-    });
 
+    var animationEndMonika = function(){
+        monika.addEventListener('animationend', function(){
+            monikaText.innerHTML=monikaText1;
+            monikaText.style.animationName='fadeIn';
+            monikaText.style.animationDuration='2.5s';
+            monikaText.style.animationFillMode='backwards';
+            monikaText.style.width='40%';
+            monika.style.marginTop='-38.4px';
+        });
+    };
+
+    animationEndMonika();
+    
     chibiSayori.addEventListener('click', function(){
         contentMain.style.animationName='fadeOut';
         contentMain.style.animationDuration='.5s';
@@ -209,6 +245,12 @@ window.onload = function(){
         background.style.background = 'url(static/images/sayoribg.png)';
 
         setTimeout(function(){
+            girlsText.style.fontSize='0px';
+            monikaText.style.fontSize='0px';
+            sayoriText.style.fontSize='24px';
+            natsukiText.style.fontSize='0px';
+            yuriText.style.fontSize='0px';
+
             contentMain.style.animationName='fadeIn';
             
             sectionGirls.style.height='0px';
@@ -272,6 +314,12 @@ window.onload = function(){
         background.style.background = 'url(static/images/natsukibg.png)';
 
         setTimeout(function(){
+            girlsText.style.fontSize='0px';
+            monikaText.style.fontSize='0px';
+            sayoriText.style.fontSize='0px';
+            natsukiText.style.fontSize='24px';
+            yuriText.style.fontSize='0px';
+
             contentMain.style.animationName='fadeIn';
             
             sectionGirls.style.height='0px';
@@ -338,6 +386,12 @@ window.onload = function(){
         background.style.background = 'url(static/images/yuribg.png)';
 
         setTimeout(function(){
+            girlsText.style.fontSize='0px';
+            monikaText.style.fontSize='0px';
+            sayoriText.style.fontSize='0px';
+            natsukiText.style.fontSize='0px';
+            yuriText.style.fontSize='24px';
+
             contentMain.style.animationName='fadeIn';
             
             sectionGirls.style.height='0px';
@@ -371,8 +425,8 @@ window.onload = function(){
             };
 
             for (var i = 0; i < girlsS.length; i++){
-                girlsM[i].style.height='0',
-                girlsM[i].style.width='0';
+                girlsS[i].style.height='0',
+                girlsS[i].style.width='0';
             };
 
             for (var i = 0; i < girlsY.length; i++){
@@ -471,6 +525,8 @@ window.onload = function(){
         //Code;
     });
 
+
+    //Bugs
     setTimeout(function(){
         background.style.filter='invert(100%)';
     }, 10000);
