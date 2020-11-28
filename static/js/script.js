@@ -11,7 +11,6 @@ window.onload = function(){
     const chibiNatsuki = document.getElementById('chibi-natsuki');
     const chibiYuri = document.getElementById('chibi-yuri');
     const contentMain = document.getElementById('main');
-    const bounce = document.getElementById('bounce');
     const girlsText = document.getElementById('girlsText');
     const monikaText = document.getElementById('monikaText');
     const sayoriText = document.getElementById('sayoriText');
@@ -31,7 +30,7 @@ window.onload = function(){
     const girlsS = document.getElementsByClassName('girlsS');
     const girlsN = document.getElementsByClassName('girlsN');
     const girlsY = document.getElementsByClassName('girlsY');
-    const bounce1 = document.getElementsByClassName('bounce');
+    const bounce = document.getElementsByClassName('bounce');
 
 
     const girlsText1 = 'Doki Doki Literature Club! é um jogo eletrônico de visual novel desenvolvida pela Team Salvato. Foi lançado em 22 de setembro de 2017 para Microsoft Windows, macOS, e Linux, e mais tarde em 6 de outubro para a Steam. A história segue um aluno do ensino médio que se junta ao Clube de Literatura da escola e interage com quatro garotas. O jogo apresenta uma história principalmente linear, com algumas cenas e finais alternativos dependendo das escolhas que o jogador faz. O jogo começa com você conhecendo Sayori, uma garota que você conhece como uma amiga de longa data';
@@ -60,10 +59,7 @@ window.onload = function(){
         girlsText.style.width='40%';
     });  
 
-    var girlsState = false;
     logo.addEventListener('click', function(){
-        girlsState = true;
-
         contentMain.style.animationName='fadeOut';
         contentMain.style.animationDuration='.5s';
         contentMain.style.animationFillMode='forwards';
@@ -82,9 +78,6 @@ window.onload = function(){
             sectionGirls.style.height='auto';
             sectionGirls.style.width='auto';
 
-            girlsText.innerHTML=girlsText1;
-            girlsText.style.width='40%';
-
             sectionMonika.style.height='0px';
             sectionMonika.style.width='0px';  
 
@@ -98,35 +91,31 @@ window.onload = function(){
             sectionYuri.style.width='0px';  
 
             for (var i = 0; i < girlsM.length; i++){
-                girlsM[i].style.height='0',
-                girlsM[i].style.width='0';
+                girlsM[i].style.height='0px',
+                girlsM[i].style.width='0px';
             };
 
             for (var i = 0; i < girlsS.length; i++){
-                girlsS[i].style.height='0',
-                girlsS[i].style.width='0';
+                girlsS[i].style.height='0px',
+                girlsS[i].style.width='0px';
             };
 
             for (var i = 0; i < girlsN.length; i++){
-                girlsN[i].style.height='0',
-                girlsN[i].style.width='0';
+                girlsN[i].style.height='0px',
+                girlsN[i].style.width='0px';
             };
 
             for (var i = 0; i < girlsY.length; i++){
-                girlsY[i].style.height='0',
-                girlsY[i].style.width='0';
+                girlsY[i].style.height='0px',
+                girlsY[i].style.width='0px';
             };
 
-            girlsLogoState();
+            girls.style.animationName='slideToRightGirls';
+            girls.style.animationDuration='.5s';
+            girls.style.animationFillMode='backwards';
+
         }, 600)
     });
-
-    function girlsLogoState(){
-        if(girlsState == true){
-            girls.style.animationName='slideToRightGirls';
-            girls.style.animationPlayState='paused';
-        };
-    };
 
     chibiMonika.addEventListener('click', function(){
         contentMain.style.animationName='fadeOut';
@@ -220,18 +209,18 @@ window.onload = function(){
             sectionSayori.style.width='auto';
 
             for (var i = 0; i < girlsM.length; i++){
-                girlsM[i].style.height='0',
-                girlsM[i].style.width='0';
+                girlsM[i].style.height='0px',
+                girlsM[i].style.width='0px';
             };
 
             for (var i = 0; i < girlsN.length; i++){
-                girlsN[i].style.height='0',
-                girlsN[i].style.width='0';
+                girlsN[i].style.height='0px',
+                girlsN[i].style.width='0px';
             };
 
             for (var i = 0; i < girlsY.length; i++){
-                girlsY[i].style.height='0',
-                girlsY[i].style.width='0';
+                girlsY[i].style.height='0px',
+                girlsY[i].style.width='0px';
             };
 
             for (var i = 0; i < girlsS.length; i++){
@@ -301,8 +290,8 @@ window.onload = function(){
             };
 
             for (var i = 0; i < girlsY.length; i++){
-                girlsY[i].style.height='0',
-                girlsY[i].style.width='0';
+                girlsY[i].style.height='0px',
+                girlsY[i].style.width='0px';
 
             natsuki.style.animationName='slideToRightNatsuki';
             natsuki.style.animationDuration='.5s';
@@ -352,18 +341,18 @@ window.onload = function(){
             sectionYuri.style.width='auto';
 
             for (var i = 0; i < girlsM.length; i++){
-                girlsM[i].style.height='0',
-                girlsM[i].style.width='0';
+                girlsM[i].style.height='0px',
+                girlsM[i].style.width='0px';
             };
 
             for (var i = 0; i < girlsN.length; i++){
-                girlsN[i].style.height='0',
-                girlsN[i].style.width='0';
+                girlsN[i].style.height='0px',
+                girlsN[i].style.width='0px';
             };
 
             for (var i = 0; i < girlsS.length; i++){
-                girlsS[i].style.height='0',
-                girlsS[i].style.width='0';
+                girlsS[i].style.height='0px',
+                girlsS[i].style.width='0px';
             };
 
             for (var i = 0; i < girlsY.length; i++){
@@ -390,67 +379,71 @@ window.onload = function(){
 
     //Bounce
     girls.addEventListener('click', function(){
-        bounce.style.animationName='bounce';
-        bounce.style.animationDuration='.3s';
-        bounce.style.animationFillMode='forwards';
-        
+        for(var i = 0; i < bounce.length; i++){
+            bounce[i].style.animationName='bounce',
+            bounce[i].style.animationDuration='.3s',
+            bounce[i].style.animationFillMode='forwards';
+        };
+       
         setTimeout(function(){
-            bounce.style.animationName='';
+            for(var i = 0; i < bounce.length; i++){
+                bounce[i].style.animationName='';
+            };
         }, 1050);
     });
 
     monika.addEventListener('click', function(){
-        for(var i = 0; i < bounce1.length; i++){
-            bounce1[i].style.animationName='bounce',
-            bounce1[i].style.animationDuration='.3s',
-            bounce1[i].style.animationFillMode='forwards';
+        for(var i = 0; i < bounce.length; i++){
+            bounce[i].style.animationName='bounce',
+            bounce[i].style.animationDuration='.3s',
+            bounce[i].style.animationFillMode='forwards';
         };
        
         setTimeout(function(){
-            for(var i = 0; i < bounce1.length; i++){
-                bounce1[i].style.animationName='';
+            for(var i = 0; i < bounce.length; i++){
+                bounce[i].style.animationName='';
             };
         }, 1050);
     });
 
     sayori.addEventListener('click', function(){
-        for(var i = 0; i < bounce1.length; i++){
-            bounce1[i].style.animationName='bounce',
-            bounce1[i].style.animationDuration='.3s',
-            bounce1[i].style.animationFillMode='forwards';
+        for(var i = 0; i < bounce.length; i++){
+            bounce[i].style.animationName='bounce',
+            bounce[i].style.animationDuration='.3s',
+            bounce[i].style.animationFillMode='forwards';
         };
        
         setTimeout(function(){
-            for(var i = 0; i < bounce1.length; i++){
-                bounce1[i].style.animationName='';
+            for(var i = 0; i < bounce.length; i++){
+                bounce[i].style.animationName='';
             };
         }, 1050);
     });
 
     natsuki.addEventListener('click', function(){
-        for(var i = 0; i < bounce1.length; i++){
-            bounce1[i].style.animationName='bounce',
-            bounce1[i].style.animationDuration='.3s',
-            bounce1[i].style.animationFillMode='forwards';
+        for(var i = 0; i < bounce.length; i++){
+            bounce[i].style.animationName='bounce',
+            bounce[i].style.animationDuration='.3s',
+            bounce[i].style.animationFillMode='forwards';
         };
        
         setTimeout(function(){
-            for(var i = 0; i < bounce1.length; i++){
-                bounce1[i].style.animationName='';
+            for(var i = 0; i < bounce.length; i++){
+                bounce[i].style.animationName='';
             };
         }, 1050);
     });
 
     yuri.addEventListener('click', function(){
-        for(var i = 0; i < bounce1.length; i++){
-            bounce1[i].style.animationName='bounce',
-            bounce1[i].style.animationDuration='.3s',
-            bounce1[i].style.animationFillMode='forwards';
+        for(var i = 0; i < bounce.length; i++){
+            bounce[i].style.animationName='bounce',
+            bounce[i].style.animationDuration='.3s',
+            bounce[i].style.animationFillMode='forwards';
         };
        
         setTimeout(function(){
-            for(var i = 0; i < bounce1.length; i++){
-                bounce1[i].style.animationName='';
+            for(var i = 0; i < bounce.length; i++){
+                bounce[i].style.animationName='';
             };
         }, 1050);
     });
