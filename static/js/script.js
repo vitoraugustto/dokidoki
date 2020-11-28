@@ -3,18 +3,15 @@ window.onload = function(){
     setTimeout(function(){
         document.body.className="";
     }, 80);
-
-
     
     const background = document.getElementById('bg');
+    const logo = document.getElementById('logo');
     const chibiMonika = document.getElementById('chibi-monika');
     const chibiSayori = document.getElementById('chibi-sayori');
     const chibiNatsuki = document.getElementById('chibi-natsuki');
     const chibiYuri = document.getElementById('chibi-yuri');
-    const logo = document.getElementById('logo');
     const contentMain = document.getElementById('main');
     const bounce = document.getElementById('bounce');
-    const monikaPoems = document.getElementById('monikaPoems');
     const girlsText = document.getElementById('girlsText');
     const monikaText = document.getElementById('monikaText');
     const sayoriText = document.getElementById('sayoriText');
@@ -37,8 +34,6 @@ window.onload = function(){
     const bounce1 = document.getElementsByClassName('bounce');
 
 
-
-
     const girlsText1 = 'Doki Doki Literature Club! é um jogo eletrônico de visual novel desenvolvida pela Team Salvato. Foi lançado em 22 de setembro de 2017 para Microsoft Windows, macOS, e Linux, e mais tarde em 6 de outubro para a Steam. A história segue um aluno do ensino médio que se junta ao Clube de Literatura da escola e interage com quatro garotas. O jogo apresenta uma história principalmente linear, com algumas cenas e finais alternativos dependendo das escolhas que o jogador faz. O jogo começa com você conhecendo Sayori, uma garota que você conhece como uma amiga de longa data';
 
     const monikaText1 = 'Monika é notada pelos outros personagens como inteligente, confiante e atlética. Ela não é tão falante quanto as  outras garotas, mas isso está implícito para não ser uma escolha. Monika também é conhecida por ser popular, o que faz com que o protagonista tenha uma admiração por ela. Ela sempre tem uma expressão calma e gentil e é retratada como madura e trabalhadora. <br/><br/> Monika já fazia parte do Debate Club, mas foi embora devido a toda a política e drama internos, destacando o desejo de ordem, liberdade de tópicos e simpatia. O Clube de Literatura, que ela fundou após deixar o Clube de Debate, é muito importante para ela. Ela aspira a ser um lugar para mostrar e aumentar a paixão de todos pela literatura.';
@@ -52,14 +47,12 @@ window.onload = function(){
 
 
     girls.addEventListener('mouseenter', function(){
-
         girls.style.animationName='slideToRightGirls';
         girls.style.animationDuration='.5s';
         girls.style.animationFillMode='backwards';
     });
     
     girls.addEventListener('animationend', function(){
-
         girlsText.innerHTML=girlsText1;
         girlsText.style.animationName='fadeIn';
         girlsText.style.animationDuration='2.5s';
@@ -68,10 +61,8 @@ window.onload = function(){
     });  
 
     var girlsState = false;
-    
     logo.addEventListener('click', function(){
         girlsState = true;
-
 
         contentMain.style.animationName='fadeOut';
         contentMain.style.animationDuration='.5s';
@@ -85,7 +76,6 @@ window.onload = function(){
             sayoriText.style.fontSize='0px';
             natsukiText.style.fontSize='0px';
             yuriText.style.fontSize='0px';
-
 
             contentMain.style.animationName='fadeIn';
 
@@ -106,11 +96,6 @@ window.onload = function(){
 
             sectionYuri.style.height='0px';
             sectionYuri.style.width='0px';  
-
-            monikaText.innerHTML='';
-            sayoriText.innerHTML='';
-            natsukiText.innerHTML='';
-            yuriText.innerHTML='';
 
             for (var i = 0; i < girlsM.length; i++){
                 girlsM[i].style.height='0',
@@ -133,37 +118,17 @@ window.onload = function(){
             };
 
             girlsLogoState();
-
         }, 600)
     });
 
     function girlsLogoState(){
         if(girlsState == true){
-            girls.style.animationDuration='0s';
+            girls.style.animationName='slideToRightGirls';
+            girls.style.animationPlayState='paused';
         };
     };
 
-
-    var counter = 0
     chibiMonika.addEventListener('click', function(){
-        counter += 1;
-
-        //console.log(counter);
-
-        function verifyCounter(){
-            if(counter >= 2){
-                monikaText.innerHTML=monikaText1;
-
-                sectionMonika.style.animation='fadeOut';
-
-
-                monikaText.style.width='40%';
-                monika.style.marginTop='-38.4px';
-            };
-        };
-
-        verifyCounter();
-
         contentMain.style.animationName='fadeOut';
         contentMain.style.animationDuration='.5s';
         contentMain.style.animationFillMode='forwards';
@@ -186,12 +151,6 @@ window.onload = function(){
 
             sectionNatsuki.style.height='0px';
             sectionNatsuki.style.width='0px';
-
-            girlsText.innerHTML='';
-            sayoriText.innerHTML='';
-            natsukiText.innerHTML='';
-            yuriText.innerHTML='';
-            
 
             sectionMonika.style.height='auto';
             sectionMonika.style.width='auto';
@@ -216,32 +175,27 @@ window.onload = function(){
                 girlsY[i].style.width='0px';
             };
 
+            monika.style.animationName='slideToRightMonika';
+            monika.style.animationDuration='.5s';
+            monika.style.animationFillMode='backwards';
+
         }, 600)
     });
 
-    monika.addEventListener('mouseenter', function(){
-        monika.style.animationName='slideToRightMonika';
-        monika.style.animationDuration='.5s';
-        monika.style.animationFillMode='backwards';
+    monika.addEventListener('animationend', function(){
+        monikaText.innerHTML=monikaText1;
+        monikaText.style.animationName='fadeIn';
+        monikaText.style.animationDuration='2.5s';
+        monikaText.style.animationFillMode='backwards';
+        monikaText.style.width='40%';
+        monika.style.marginTop='-38.4px';
     });
 
-    var animationEndMonika = function(){
-        monika.addEventListener('animationend', function(){
-            monikaText.innerHTML=monikaText1;
-            monikaText.style.animationName='fadeIn';
-            monikaText.style.animationDuration='2.5s';
-            monikaText.style.animationFillMode='backwards';
-            monikaText.style.width='40%';
-            monika.style.marginTop='-38.4px';
-        });
-    };
-
-    animationEndMonika();
-    
     chibiSayori.addEventListener('click', function(){
         contentMain.style.animationName='fadeOut';
         contentMain.style.animationDuration='.5s';
         contentMain.style.animationFillMode='forwards';
+        
         background.style.background = 'url(static/images/sayoribg.png)';
 
         setTimeout(function(){
@@ -261,11 +215,6 @@ window.onload = function(){
 
             sectionYuri.style.height='0px';
             sectionYuri.style.width='0px';
-
-            girlsText.innerHTML='';
-            monikaText.innerHTML='';
-            natsukiText.innerHTML='';
-            yuriText.innerHTML='';
 
             sectionSayori.style.height='auto';
             sectionSayori.style.width='auto';
@@ -288,14 +237,13 @@ window.onload = function(){
             for (var i = 0; i < girlsS.length; i++){
                 girlsS[i].style.height='800px',
                 girlsS[i].style.width='auto';
-            };           
-        }, 600)
-    });
+            };    
+            
+            sayori.style.animationName='slideToRightSayori';
+            sayori.style.animationDuration='.5s';
+            sayori.style.animationFillMode='backwards';
 
-    sayori.addEventListener('mouseenter', function(){
-        sayori.style.animationName='slideToRightSayori';
-        sayori.style.animationDuration='.5s';
-        sayori.style.animationFillMode='backwards';
+        }, 600)
     });
     
     sayori.addEventListener('animationend', function(){
@@ -334,11 +282,6 @@ window.onload = function(){
             sectionYuri.style.height='0px';
             sectionYuri.style.width='0px';
 
-            girlsText.innerHTML='';
-            monikaText.innerHTML='';
-            sayoriText.innerHTML='';
-            yuriText.innerHTML='';
-
             sectionNatsuki.style.height='auto';
             sectionNatsuki.style.width='auto';
 
@@ -360,14 +303,13 @@ window.onload = function(){
             for (var i = 0; i < girlsY.length; i++){
                 girlsY[i].style.height='0',
                 girlsY[i].style.width='0';
+
+            natsuki.style.animationName='slideToRightNatsuki';
+            natsuki.style.animationDuration='.5s';
+            natsuki.style.animationFillMode='backwards';
+
             };
         }, 600)
-    });
-
-    natsuki.addEventListener('mouseenter', function(){
-        natsuki.style.animationName='slideToRightNatsuki';
-        natsuki.style.animationDuration='.5s';
-        natsuki.style.animationFillMode='backwards';
     });
     
     natsuki.addEventListener('animationend', function(){
@@ -406,11 +348,6 @@ window.onload = function(){
             sectionSayori.style.height='0px';
             sectionSayori.style.width='0px';
 
-            girlsText.innerHTML='';
-            monikaText.innerHTML='';
-            natsukiText.innerHTML='';
-            sayoriText.innerHTML='';
-
             sectionYuri.style.height='auto';
             sectionYuri.style.width='auto';
 
@@ -432,14 +369,13 @@ window.onload = function(){
             for (var i = 0; i < girlsY.length; i++){
                 girlsY[i].style.height='800px',
                 girlsY[i].style.width='auto';
+
+            yuri.style.animationName='slideToRightYuri';
+            yuri.style.animationDuration='.5s';
+            yuri.style.animationFillMode='backwards';
+
             };           
         }, 600)
-    });
-
-    yuri.addEventListener('mouseenter', function(){
-        yuri.style.animationName='slideToRightYuri';
-        yuri.style.animationDuration='.5s';
-        yuri.style.animationFillMode='backwards';
     });
     
     yuri.addEventListener('animationend', function(){
@@ -452,9 +388,7 @@ window.onload = function(){
     });
     
 
-    
     //Bounce
-
     girls.addEventListener('click', function(){
         bounce.style.animationName='bounce';
         bounce.style.animationDuration='.3s';
@@ -521,11 +455,7 @@ window.onload = function(){
         }, 1050);
     });
 
-    monikaPoems.addEventListener('click', function(){
-        //Code;
-    });
-
-
+    
     //Bugs
     setTimeout(function(){
         background.style.filter='invert(100%)';
@@ -534,5 +464,4 @@ window.onload = function(){
     setTimeout(function(){
         background.style.filter='invert(0%)';
     }, 10150);
-
 };
