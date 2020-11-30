@@ -3,45 +3,51 @@ window.onload = function(){
     setTimeout(function(){
         document.body.className="";
     }, 80);
-    
+
+    const contentMain = document.getElementById('main');
     const background = document.getElementById('bg');
+
     const logo = document.getElementById('logo');
     const chibiMonika = document.getElementById('chibi-monika');
     const chibiSayori = document.getElementById('chibi-sayori');
     const chibiNatsuki = document.getElementById('chibi-natsuki');
     const chibiYuri = document.getElementById('chibi-yuri');
-    const contentMain = document.getElementById('main');
+    
     const girlsText = document.getElementById('girlsText');
     const monikaText = document.getElementById('monikaText');
     const sayoriText = document.getElementById('sayoriText');
     const natsukiText = document.getElementById('natsukiText');
     const yuriText = document.getElementById('yuriText');
+
     const girls = document.getElementById('girls');
     const monika = document.getElementById('monika');
     const sayori = document.getElementById('sayori');
     const natsuki = document.getElementById('natsuki');
     const yuri = document.getElementById('yuri');
+
     const sectionGirls = document.getElementById('sectionGirls');
     const sectionMonika = document.getElementById('sectionMonika');
     const sectionSayori = document.getElementById('sectionSayori');
     const sectionNatsuki = document.getElementById('sectionNatsuki');
     const sectionYuri = document.getElementById('sectionYuri');
+
     const girlsM = document.getElementsByClassName('girlsM');
     const girlsS = document.getElementsByClassName('girlsS');
     const girlsN = document.getElementsByClassName('girlsN');
     const girlsY = document.getElementsByClassName('girlsY');
+
     const bounce = document.getElementsByClassName('bounce');
 
 
-    const girlsText1 = 'Doki Doki Literature Club! é um jogo eletrônico de visual novel desenvolvida pela Team Salvato. Foi lançado em 22 de setembro de 2017 para Microsoft Windows, macOS, e Linux, e mais tarde em 6 de outubro para a Steam. A história segue um aluno do ensino médio que se junta ao Clube de Literatura da escola e interage com quatro garotas. O jogo apresenta uma história principalmente linear, com algumas cenas e finais alternativos dependendo das escolhas que o jogador faz. O jogo começa com você conhecendo Sayori, uma garota que você conhece como uma amiga de longa data';
+    var textGirls = 'Doki Doki Literature Club! é um jogo eletrônico de visual novel desenvolvida pela Team Salvato. Foi lançado em 22 de setembro de 2017 para Microsoft Windows, macOS, e Linux, e mais tarde em 6 de outubro para a Steam. A história segue um aluno do ensino médio que se junta ao Clube de Literatura da escola e interage com quatro garotas. O jogo apresenta uma história principalmente linear, com algumas cenas e finais alternativos dependendo das escolhas que o jogador faz. O jogo começa com você conhecendo Sayori, uma garota que você conhece como uma amiga de longa data';
 
-    const monikaText1 = 'Monika é notada pelos outros personagens como inteligente, confiante e atlética. Ela não é tão falante quanto as  outras garotas, mas isso está implícito para não ser uma escolha. Monika também é conhecida por ser popular, o que faz com que o protagonista tenha uma admiração por ela. Ela sempre tem uma expressão calma e gentil e é retratada como madura e trabalhadora. <br/><br/> Monika já fazia parte do Debate Club, mas foi embora devido a toda a política e drama internos, destacando o desejo de ordem, liberdade de tópicos e simpatia. O Clube de Literatura, que ela fundou após deixar o Clube de Debate, é muito importante para ela. Ela aspira a ser um lugar para mostrar e aumentar a paixão de todos pela literatura.';
+    var textMonika = 'Monika é notada pelos outros personagens como inteligente, confiante e atlética. Ela não é tão falante quanto as  outras garotas, mas isso está implícito para não ser uma escolha. Monika também é conhecida por ser popular, o que faz com que o protagonista tenha uma admiração por ela. Ela sempre tem uma expressão calma e gentil e é retratada como madura e trabalhadora. <br/><br/> Monika já fazia parte do Debate Club, mas foi embora devido a toda a política e drama internos, destacando o desejo de ordem, liberdade de tópicos e simpatia. O Clube de Literatura, que ela fundou após deixar o Clube de Debate, é muito importante para ela. Ela aspira a ser um lugar para mostrar e aumentar a paixão de todos pela literatura.';
 
-    const natsukiText1 = 'Natsuki parece ser uma garota impetuosa, brusca, irritada e aparentemente arrogante no início, com um interior fofo e suave como resultado da insegurança, convencendo Monika para classificá-la como a personificação de uma tsundere. Enquanto ela é impulsiva e pode falar sem pensar, Natsuki realmente se importa com seus amigos e, mesmo quando ela tem óbvias questões de raiva, não gosta de brigas ou discussões com as pessoas. <br/> <br/> Ao longo do jogo, é mostrado que ela se preocupa com Yuri e, em uma ocasião, dá ao protagonista uma nota pedindo que ele ajude Yuri, temendo que se ela se manifestasse, isso causaria mais discussões. Natsuki é muito teimosa e tem dificuldade em expressar como se sente e o que quer. Quando desafiada repetidamente, ela geralmente se torna estranha, depois agressiva e simplesmente explode em lágrimas.';
+    var textSayori = 'Sayori é retratado como uma garota Genki, expressando uma disposição faladora e alegre. Ela é muito desajeitada, conhecida por encontrar maneiras de se machucar acidentalmente ou largar as coisas. Monika observando que seus sentimentos são necessários para manter uma atmosfera relaxante no Clube da Literatura. <br/> <br/>Monika observa que, embora possa parecer uma boa líder, Sayori geralmente é melhor quando se trata de lidar com pessoas, principalmente em mediações. Sayori faz o possível para ajudar todos a serem felizes e não gosta da atenção direcionada ao seu bem-estar, porque se sente indigna de tudo o que os outros têm a oferecer. Sayori também é apresentado como o melhor amigo do personagem principal.';
 
-    const sayoriText1 = 'Sayori é retratado como uma garota Genki, expressando uma disposição faladora e alegre. Ela é muito desajeitada, conhecida por encontrar maneiras de se machucar acidentalmente ou largar as coisas. Monika observando que seus sentimentos são necessários para manter uma atmosfera relaxante no Clube da Literatura. <br/> <br/>Monika observa que, embora possa parecer uma boa líder, Sayori geralmente é melhor quando se trata de lidar com pessoas, principalmente em mediações. Sayori faz o possível para ajudar todos a serem felizes e não gosta da atenção direcionada ao seu bem-estar, porque se sente indigna de tudo o que os outros têm a oferecer. Sayori também é apresentado como o melhor amigo do personagem principal.';
+    var textNatsuki = 'Natsuki parece ser uma garota impetuosa, brusca, irritada e aparentemente arrogante no início, com um interior fofo e suave como resultado da insegurança, convencendo Monika para classificá-la como a personificação de uma tsundere. Enquanto ela é impulsiva e pode falar sem pensar, Natsuki realmente se importa com seus amigos e, mesmo quando ela tem óbvias questões de raiva, não gosta de brigas ou discussões com as pessoas. <br/> <br/> Ao longo do jogo, é mostrado que ela se preocupa com Yuri e, em uma ocasião, dá ao protagonista uma nota pedindo que ele ajude Yuri, temendo que se ela se manifestasse, isso causaria mais discussões. Natsuki é muito teimosa e tem dificuldade em expressar como se sente e o que quer. Quando desafiada repetidamente, ela geralmente se torna estranha, depois agressiva e simplesmente explode em lágrimas.';
 
-    const yuriText1 = 'Yuri é retratada durante a maior parte do jogo como sendo tímida, generosa, educada, muito inteligente, madura, eloquente e apaixonada por tópicos pelos quais se interessa, embora ela também seja muito insegura. Sua fachada de passividade e tontura ocasionalmente quebra, no entanto, como Yuri discute apaixonadamente e agressivamente com Natsuki sobre suas opiniões divergentes sobre estilos de escrita. <br/> <br/> Yuri tem um profundo desejo de ser apreciada pelos outros e tem medo de falar o que pensa sobre assuntos, pois acredita que isso fará com que ela pareça improvável. Devido à sua inaptidão social, ela pode ser inocentemente insensível, mas uma vez que percebe o que disse ser considerado rude, quase imediatamente pede desculpas, repetidamente dizendo que não quis dizer isso. Como afirma o protagonista, Yuri gosta de pensar antes de dizer algo.';
+    var textYuri = 'Yuri é retratada durante a maior parte do jogo como sendo tímida, generosa, educada, muito inteligente, madura, eloquente e apaixonada por tópicos pelos quais se interessa, embora ela também seja muito insegura. Sua fachada de passividade e tontura ocasionalmente quebra, no entanto, como Yuri discute apaixonadamente e agressivamente com Natsuki sobre suas opiniões divergentes sobre estilos de escrita. <br/> <br/> Yuri tem um profundo desejo de ser apreciada pelos outros e tem medo de falar o que pensa sobre assuntos, pois acredita que isso fará com que ela pareça improvável. Devido à sua inaptidão social, ela pode ser inocentemente insensível, mas uma vez que percebe o que disse ser considerado rude, quase imediatamente pede desculpas, repetidamente dizendo que não quis dizer isso. Como afirma o protagonista, Yuri gosta de pensar antes de dizer algo.';
 
 
 
@@ -52,7 +58,7 @@ window.onload = function(){
     });
     
     girls.addEventListener('animationend', function(){
-        girlsText.innerHTML=girlsText1;
+        girlsText.innerHTML=textGirls;
         girlsText.style.animationName='fadeIn';
         girlsText.style.animationDuration='2.5s';
         girlsText.style.animationFillMode='backwards';
@@ -172,7 +178,7 @@ window.onload = function(){
     });
 
     monika.addEventListener('animationend', function(){
-        monikaText.innerHTML=monikaText1;
+        monikaText.innerHTML=textMonika;
         monikaText.style.animationName='fadeIn';
         monikaText.style.animationDuration='2.5s';
         monikaText.style.animationFillMode='backwards';
@@ -226,7 +232,7 @@ window.onload = function(){
             for (var i = 0; i < girlsS.length; i++){
                 girlsS[i].style.height='800px',
                 girlsS[i].style.width='auto';
-            };    
+            };
             
             sayori.style.animationName='slideToRightSayori';
             sayori.style.animationDuration='.5s';
@@ -236,7 +242,7 @@ window.onload = function(){
     });
     
     sayori.addEventListener('animationend', function(){
-        sayoriText.innerHTML=sayoriText1;
+        sayoriText.innerHTML=textSayori;
         sayoriText.style.animationName='fadeIn';
         sayoriText.style.animationDuration='2.5s';
         sayoriText.style.animationFillMode='backwards';
@@ -302,7 +308,7 @@ window.onload = function(){
     });
     
     natsuki.addEventListener('animationend', function(){
-        natsukiText.innerHTML=natsukiText1;
+        natsukiText.innerHTML=textNatsuki;
         natsukiText.style.animationName='fadeIn';
         natsukiText.style.animationDuration='2.5s';
         natsukiText.style.animationFillMode='backwards';
@@ -363,19 +369,19 @@ window.onload = function(){
             yuri.style.animationDuration='.5s';
             yuri.style.animationFillMode='backwards';
 
-            };           
+            };
         }, 600)
     });
     
     yuri.addEventListener('animationend', function(){
-        yuriText.innerHTML=yuriText1;
+        yuriText.innerHTML=textYuri;
         yuriText.style.animationName='fadeIn';
         yuriText.style.animationDuration='2.5s';
         yuriText.style.animationFillMode='backwards';
         yuriText.style.width='40%';
         yuri.style.marginTop='-38.4px';
     });
-    
+
 
     //Bounce
     girls.addEventListener('click', function(){
@@ -448,7 +454,7 @@ window.onload = function(){
         }, 1050);
     });
 
-    
+
     //Bugs
     setTimeout(function(){
         background.style.filter='invert(100%)';
@@ -456,5 +462,5 @@ window.onload = function(){
     
     setTimeout(function(){
         background.style.filter='invert(0%)';
-    }, 10150);
+    }, 10100);
 };
