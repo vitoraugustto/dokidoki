@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="static/css/globalstyle.css">
         <script src="static/js/script.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet" />
         <title>Doki Doki!</title>
     </head>
     <body class="preload">
@@ -18,7 +20,7 @@
                         <ul class="menu">
                             <li><img id="chibi-monika" class="chibi" src="static/images/chibimonika.png"></li>
                             <li><img id="chibi-sayori" class="chibi" src="static/images/chibisayori.png"></li>
-                            <li><img id="chibi-natsuki" class="chibi" src="static/images/chibinatsuki.png"></a></li>
+                            <li><img id="chibi-natsuki" class="chibi" src="static/images/chibinatsuki.png"></li>
                             <li><img id="chibi-yuri" class="chibi" src="static/images/chibiyuri.png"></li>
                         </ul>
                 </header>
@@ -50,36 +52,28 @@
                         <div class="poems-wrapper" id="poems-wrapper">
                             <h2>poemas</h2>
                             <ul id="aside-poems" class="aside-poems">
-                                <li class="button">Monika</li>
-                                <li class="button">Sayori</li>
-                                <li class="button">Natsuki</li>
-                                <li class="button">Yuri</li>
+                                <li id="monikaButton" class="button">Monika</li>
+                                <li id="sayoriButton" class="button">Sayori</li>
+                                <li id="natsukiButton" class="button">Natsuki</li>
+                                <li id="yuriButton" class="button">Yuri</li>
                             </ul>
                         </div>
                     </aside>
                     <section class="poems">
-                        <div id="monikaPoems">
-                            <h3>Buraco na parede.</h3>
-                            <span>Este poema é mostrado no segundo dia.</span> <br><br>
-                            <p class="body-poem">
-                                Não poderia ter sido eu. <br>
-                                Veja, a direção que o concreto se projeta. <br>
-                                Um vizinho barulhento? Um namorado irritado? Nunca saberei. Eu não estava em casa. <br>
-                                Eu espio por ele procurando uma pista. <br>
-                                Não! Não posso ver. Eu cambaleio, cega, como um filme deixado no sol. <br>
-                                Mas já é tarde. Minhas retinas. <br>
-                                Já queimadas como uma cópia permanente daquela imagem sem sentido. <br>
-                                É apenas um pequeno buraco. Não era muito claro. <br>
-                                Era muito profundo. <br>
-                                Estendendo-se eternamente em tudo. <br>
-                                Um buraco de infinitas escolhas. <br> 
-                                Eu estou olhando para fora. <br>
-                                E ele, do outro lado, estava olhando para dentro. <br>
-                            </p>
+                        <div id="poems-wrapper" class="poems-wrapper">
+                            <div id="monikaPoems">
+                                <!--Dinamic poem-->
+                            </div>
+                            <div id="sayoriPoems">
+                                <!--Dinamic poem-->
+                            </div>
+                            <div id="natsukiPoems">
+                                <!--Dinamic poem-->
+                            </div>
+                            <div id="yuriPoems">
+                                <!--Dinamic poem-->
+                            </div>
                         </div>
-                        <div id="sayoriPoems" class="text"></div>
-                        <div id="natsukiPoems" class="text"></div>
-                        <div id="yuriPoems" class="text"></div>
                     </section>
                 </section>
                 <div class="division"></div>
