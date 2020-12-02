@@ -4,6 +4,7 @@ window.onload = function(){
         document.body.className = '';
     }, 80);
 
+
     const contentMain = document.getElementById('main');
     const background = document.getElementById('bg');
 
@@ -61,15 +62,27 @@ window.onload = function(){
 
     var monikaPoem1 = '<h3>Buraco na parede</h3> <br> <p class="body-poem">Não poderia ter sido eu. <br> Veja, a direção que o concreto se projeta. <br>Um vizinho barulhento? Um namorado irritado? Nunca saberei. Eu não estava em casa. <br>Eu espio por ele procurando uma pista. <br>Não! Não posso ver. Eu cambaleio, cega, como um filme deixado no sol. <br> Mas já é tarde. Minhas retinas. <br>Já queimadas como uma cópia permanente daquela imagem sem sentido. <br>É apenas um pequeno buraco. Não era muito claro <br>Era muito profundo. <br> Estendendo-se eternamente em tudo. <br>Um buraco de infinitas escolhas. <br> Eu estou olhando para fora. <br>E ele, do outro lado, estava olhando para dentro. <br></p>'
 
-    var monikaPoem2 = '<h3>Me salve</h3> <br> <p class="body-poem">As cores, elas não param. <br>Cores brilhantes e lindas. <br>Piscando, expandindo, perfurando <br>Vermelho, verde, azul <br>Uma infinita <br>cacofonia <br>De um incompreensível <br>barulho <br>O barulho, ele não para. <br>Formas de ondas violentas e irritantes <br>Rangendo chiando, perfurando <br>Seno, cosseno, tangente <br>Como brincar com um quadro de giz em um fonógrafo <br>Como brincar com um vinil em uma massa de pizza <br>Um poema <br>sem fim <br>Sem significado <br></p>'
+    var monikaPoem2 = '<h3>Me salve</h3> <br> <p class="body-poem">As cores, elas não param. <br>Cores brilhantes e lindas. <br>Piscando, expandindo, perfurando <br>Vermelho, verde, azul <br>Uma infinita <br>cacofonia <br>De um incompreensível <br>barulho <br><br>O barulho, ele não para. <br>Formas de ondas violentas e irritantes <br>Rangendo chiando, perfurando <br>Seno, cosseno, tangente <br>Como brincar com um quadro de giz em um fonógrafo <br>Como brincar com um vinil em uma massa de pizza <br>Um poema <br>sem fim <br>Sem significado <br></p>'
 
-    var monikaPoem3 = '<h3>A dama que sabe tudo</h3> <p class="body-poem"><br> Um velho conto fala de uma dama que vagueia pela Terra. <br>A Dama Que Sabe Tudo. <br>Uma bela dama que encontrou todas as respostas, <br>Todos os significados, <br>Todos os propósitos, <br>E tudo que já foi procurado <br>E aqui estou eu. <br>uma pena. <br>Perdida à deriva no céu, vítima das correntes do vento. <br>Dia após dia, procuro. <br>Procuro com pouca esperança, sabendo que lendas não existem. <br>Mas quando tudo mais falhou comigo, <br>Quando todos os outros se afastaram, <br>A lenda é tudo o que resta a última estrela fraca cintilando no céu crepuscular. <br>Até que um dia, o vento deixa de soprar. <br>Eu caio. <br>E eu caio e caio, e caio ainda mais. <br>Gentil como uma pena. <br>Uma pena seca, inexpressiva. <br>Mas uma mão me pega entre o polegar e o indicador. <br>A mão de uma bela dama. <br>Olho para os olhos dela e não encontro fim para o seu olhar. <br>A dama que Sabe Tudo sabe o que estou pensando. <br>Antes que eu possa falar, ela responde com uma voz vazia. <br>"Eu encontrei todas as respostas, todas as quais equivalem a nada. <br>Não há significado. <br>Não há propósito. <br>E buscamos apenas o impossível. <br>Eu não sou sua lenda. <br>Sua lenda não existe." <br>E com um sopro, ela me lança de volta ao ar e eu sigo uma rajada de vento. <br></p>'
+    var monikaPoem3 = '<h3>A dama que sabe tudo</h3> <p class="body-poem"><br> Um velho conto fala de uma dama que vagueia pela Terra. <br>A Dama Que Sabe Tudo. <br>Uma bela dama que encontrou todas as respostas, <br>Todos os significados, <br>Todos os propósitos, <br>E tudo que já foi procurado <br><br>E aqui estou eu. <br><br>uma pena. <br><br>Perdida à deriva no céu, vítima das correntes do vento. <br><br>Dia após dia, procuro. <br>Procuro com pouca esperança, sabendo que lendas não existem. <br>Mas quando tudo mais falhou comigo, <br>Quando todos os outros se afastaram, <br>A lenda é tudo o que resta a última estrela fraca cintilando no céu crepuscular. <br><br>Até que um dia, o vento deixa de soprar. <br>Eu caio. <br>E eu caio e caio, e caio ainda mais. <br>Gentil como uma pena. <br>Uma pena seca, inexpressiva. <br><br> Mas uma mão me pega entre o polegar e o indicador. <br>A mão de uma bela dama. <br>Olho para os olhos dela e não encontro fim para o seu olhar. <br><br>A dama que Sabe Tudo sabe o que estou pensando. <br>Antes que eu possa falar, ela responde com uma voz vazia. <br>"Eu encontrei todas as respostas, todas as quais equivalem a nada. <br>Não há significado. <br>Não há propósito. <br>E buscamos apenas o impossível. <br>Eu não sou sua lenda. <br>Sua lenda não existe." <br><br>E com um sopro, ela me lança de volta ao ar e eu sigo uma rajada de vento. <br></p>'
 
     var sayoriPoem1 = '<h3>Querida Luz do Sol</h3> <br> <p class="body-poem"> A forma que você brilha através das minhas cortinas pela manhã <br> Me faz sentir como se você estivesse com saudade de mim. <br> Beijando minha testa para me ajudar a levantar da cama. <br> Fazendo eu esfregar o sono dos meus olhos. <br> Você esta me pedindo para sair e brincar? <br> Esta confiando em mim para desejar que um dia chuvoso não venha? <br> Olho para cima. O céu é azul. É um segredo, mas confio em você também. <br> <br>Se não fosse por você, eu poderia dormir para sempre. <br><br>Mas não estou com raiva.</p>'
 
     var sayoriPoem2 = '<h3>Garrafas</h3> <br> <p class="body-poem"> Eu arranco meu couro cabeludo, como a tampa de um jarro de biscoitos. <br>É o lugar secreto onde guardo todos os meus sonhos.<br>Pequenas bolas de raios solares, todas se esfregando juntas como um bando de gatinhos.<br>Eu alcanço o interior com meu polegar e arranco uma delas. <br><br>É quente e dá um formigamento.<br>Mas não há tempo a perder! Coloquei em uma garrafa para mantê-la segura.<br>E coloquei a garrafa na prateleira, com todas as outras garrafas.<br>Pensamentos felizes, pensamentos felizes, pensamentos felizes em garrafas, todos em fileira.<br><br>Minha coleção me traz muitos amigos.<br>Cada garrafa é uma luz das estrelas para compensar.<br>Às vezes, meu amigo se sente de um certo modo.<br>E aparece uma garrafa para salvar o dia.<br><br>Noite após noite, mais sonhos.<br>Amigo após amigo, mais garrafas.<br>Meus dedos vão cada vez mais fundo.<br>Como se explorando uma caverna escura, descobrindo segredos nos cantos e fendas.<br>Escavando e escavando.<br>Arranhando e arranhando.<br><br>Eu sopro a poeira das tampas de garrafa.<br>Não parece que o tempo passou.<br>Minha prateleira vazia poderia ter algumas mais.<br>Meus amigos olham através da minha porta da frente trancada.<br><br>Por fim, tudo está pronto. Eu abro e meus amigos entram.<br>Eles entram, com tanta pressa. Eles realmente querem minhas garrafas tanto assim?<br>Eu freneticamente puxo elas das prateleiras, uma após a outra.<br>Segurando elas para cada um dos amigos.<br>Cada uma das garrafas.<br>Mas cada vez que deixo uma ir, ela se quebra contra o azulejo entre meus pés.<br>Pensamentos felizes, pensamentos felizes, pensamentos felizes em estilhaços, espalhados pelo chão.<br><br>Elas deveriam ser para meus amigos, meus amigos que não estão sorrindo.<br>Todos estão gritando, implorando. Alguma coisa.<br>Mas tudo que eu escuto é eco, eco, eco, eco, eco.<br><br>Dentro da minha cabeça. </p> <br>';
 
-    var sayoriPoem3 = '<h3>%</h3> <p class="body-poem"> Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia.<br>Da.<br>Minha.<br>Cabeça.<br><br><br><br><br><br><br><br>Saia da minha cabeça antes que eu faça o que sei que é melhor para você.<br>Saia da minha cabeça antes que eu dê ouvidos a tudo que ela me disse.<br>Saia da minha cabeça antes que eu te mostre o quanto te amo.<br>Saia da minha cabeça antes que eu termine de escrever esse poema.<br><br><br><br><br><br><br><br>Mas um poema nunca acaba de verdade.<br>Ele só para de se mover.<br> </p>'
+    var sayoriPoem3 = '<h3>%</h3><br><p class="body-poem"> Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia da minha Cabeça. Saia da minha cabeça. Saia da minha cabeça. Saia da minha cabeça.<br>Saia.<br>Da.<br>Minha.<br>Cabeça.<br><br><br><br><br><br><br><br>Saia da minha cabeça antes que eu faça o que sei que é melhor para você.<br>Saia da minha cabeça antes que eu dê ouvidos a tudo que ela me disse.<br>Saia da minha cabeça antes que eu te mostre o quanto te amo.<br>Saia da minha cabeça antes que eu termine de escrever esse poema.<br><br><br><br><br><br><br><br>Mas um poema nunca acaba de verdade.<br>Ele só para de se mover.<br> </p>'
+
+    var natsukiPoem1 = '<h3>Aguias Podem Voar</h3> <br> <p class="body-poem"> Macacos podem escalar<br>Grilos podem saltar<br>Cavalos podem correr<br>Corujas podem caçar<br>Guepardos podem correr<br>Águias podem voar<br>Pessoas podem tentar<br>Mas isso é tudo.</p>'
+
+    var natsukiPoem2 = '<h3>Amy gosta de aranhas</h3> <br><p class="body-poem">Sabe o que ouvi sobre Amy?<br>Amy gosta de aranhas.<br>Aranhas nojentas, evasivas, cabeludas e feias!<br>E por isso que não sou amiga dela.<br><br>Amy tem uma bela voz para cantar.<br>Eu ouvi ela cantando minha música de amor favorita.<br>Toda vez que ela cantava o refrão. Meu coração batia ao ritmo das palavras.<br>Mas ela gosta de aranhas.<br><br>É por isso que não sou amiga dela.<br><br>Certa vez, eu machuquei minha perna.<br>Amy me ajudou e me levou á enfermaria.<br>Tentei não deixá-la tocar em mim.<br>Ela gosta de aranhas, então suas mãos provavelmente são nojentas.<br>É por isso que não sou amiga dela.<br><br>Amy tem muitos amigos.<br>Sempre vejo ela conversando com as pessoas.<br>Ela provavelmente fala sobre aranhas.<br>E se os amigos dela começarem a gostar de aranhas também?<br>É por isso que não sou amiga dela.<br><br>Não importa se ela tem outros passatempos.<br>Não importa se ela faz isso em privado.<br>Não importa se isso não machuca ninguém.<br><br>É nojento.<br>Ela é nojenta.<br><br>O mundo é melhor sem amantes de aranhas.<br><br><br>Eu vou contar a todos.</p>';
+
+    var natsukiPoem3 = '<h3>Porquê Você </h3> <br> <p class="body-poem">Amanhã será mais brilhante comigo por perto <br>Mas quando o hoje é sombrio, eu só posso abaixar a cabeça<br>Vejo um pouco mais para o futuro<br>Porque você olha para mim.<br><br>Quando eu quero dizer algo, eu digo com um grito!<br>Mas meus sentimentos mais genuínos nunca podem sair.<br>Minhas palavras são um pouco menos vazias<br>Porque você me escuta.<br><br>Quando algo esta acima de mim, eu alcanço as estrelas.<br>Mas quando me sinto pequena, não chego muito longe.<br>Minha postura é um pouco mais alta<br>Porque você se senta comigo.<br><br>Eu acredito em mim mesma com todo o meu coração.<br>Mas o que eu faço quando ele está despedaçado?<br>Minha fé é um pouco mais forte<br>Porque você confiou em mim.<br><br>Minha caneta sempre coloca os meus sentimentos a prova.<br>Eu não sou uma boa escritora, mas o meu melhor é o meu melhor.<br>Meus poemas são um pouco mais estimados<br>Porque você pensa em mim.<br><br>Porque você, porque você, porque você.</p>';
+
+    var yuriPoem1 = '<h3>Fantasma sob a luz</h3> <br>  <p class="body-poem">As mechas do meu cabelo iluminam-se sob o brilho âmbar <br>banhando-se<br>deve ser esse<br>o último poste de luz restante a ter resistido ao teste do tempo<br>o último ainda a ser substituído pela tonalidade azul-verde doentia do futuro<br>eu me banho. Calma; respirando o ar do presente, mas vivendo no passado<br>a luz cintila<br>e eu cintilo de volta.<br></p>'
+
+    var yuriPoem2 = '<h3>O Guaxinim</h3> <br> <p class="body-poem">Aconteceu no meio da noite enquanto eu estava cortando um pão para um lanche culpado <br>Minha atenção foi apanhada pela raspagem de um guaxinim fora da minha janela.<br>Foi, creio eu, a primeira vez que notei as minhas estranhas tendências de uma incomum humana.<br>Dei ao guaxinim um pedaço de pão, meu subconsciente bem ciente de suas consequências<br>Bem ciente, de que quando um guaxinim é alimentado, ele volta por mais.<br>A beleza sedutora da minha faca de corte foi o sintoma.<br>O pão, minha curiosidade está com fome.<br>O Guaxinim, um impulso.<br><br>A lua incrementa sua fase e reflete muito mais sobre a luz da lâmina de minha faca.<br>A mesma luz que cintila nos olhos do Guaxinim.<br>Eu faço o pão, fresco e macio, o Guaxinim fica ansioso.<br>Ou eu esteja apenas projetando minhas emoções para o animal recém-satisfeito.<br><br>O Guaxinim começou a me seguir.<br>Podíamos dizer que nos acostumamos um com o outro.<br>O Guaxinim fica com fome mais e mais frequentemente, então o meu pão sempre servia.<br>Toda vez que brando minha faca de corte, ele me mostra sua excitação.<br>Uma onda de sangue. Comportamento clássico. Eu faço o pão.<br></p>'
+
+    var yuriPoem3 = '<h3>Praia</h3> <br> <p class="body-poem">Uma maravilha milhões de anos em construção. <br>Onde o útero da terra encontra caoticamente a superfície.<br> Sob um céu azul claro, uma vastidão de felicidade<br>Mas sob nuvens cinzentas, um enigma sem fim.<br>O mundo mais fácil no qual se perder<br>É aquele onde tudo pode ser encontrado.<br><br>Uma pessoa só pode construir um castelo de areia onde a areia esta molhada.<br>Mas onde a areia está molhada, a maré vem.<br>Irá ela lamber suavemente seus alicerces até você ceder?<br>Ou será que uma onda repentina o derrubará em um piscar de olhos?<br>De qualquer forma, o resultado é o mesmo.<br>Mesmo assim, nós ainda construímos castelos de areia.<br><br>Eu fico parada onde a espuma envolve meus tornozelos.<br>Onde meus dedos do pé afundam na areia.<br>O ar salgado é terapêutico.<br>A brisa é suave, mas poderosa.<br>Eu afundo meus dedos do pé na fronteira final, tentada pelas ondas espumosas.<br>Volte e eu abandono minha paz para me desgastar na costa.<br>Continue em frente e eu retorno para a Terra para sempre.<br></p>';
 
     girls.addEventListener('mouseenter', function(){
         girls.style.animationName = 'slideToRightGirls';
@@ -402,9 +415,10 @@ window.onload = function(){
         yuri.style.marginTop = '-38.4px';
     });
 
-
-    var buttonStateM = 0;
+    monikaPoems.innerHTML = monikaPoem1;
+    var buttonStateM = 1;
     monikaButton.addEventListener('click', function(){
+        //chibiMonika.click();
 
         buttonStateM += 1;
 
@@ -417,6 +431,8 @@ window.onload = function(){
             monikaPoems.style.animationDuration = '.5s';
             monikaPoems.style.animationFillMode = 'forwards';
 
+            natsukiPoems.innerHTML = '';
+            yuriPoems.innerHTML = '';
             sayoriPoems.innerHTML = '';
         }, 520);
         
@@ -439,17 +455,27 @@ window.onload = function(){
             buttonStateM = 0;
         };
 
+        sayoriButton.style.animationName = 'contrastOut';
+        sayoriButton.style.animationDuration = '.1s';
+        sayoriButton.style.animationFillMode = 'forwards';
+
         monikaButton.style.animationName = 'contrastIn';
-        monikaButton.style.animationDuration = '.5s';
+        monikaButton.style.animationDuration = '.1s';
         monikaButton.style.animationFillMode = 'forwards';
 
-        sayoriButton.style.animationName = 'contrastOut';
-        sayoriButton.style.animationDuration = '.5s';
-        sayoriButton.style.animationFillMode = 'forwards';
+        natsukiButton.style.animationName = 'contrastOut';
+        natsukiButton.style.animationDuration = '.1s';
+        natsukiButton.style.animationFillMode = 'forwards';
+
+        yuriButton.style.animationName = 'contrastOut';
+        yuriButton.style.animationDuration = '.1s';
+        yuriButton.style.animationFillMode = 'forwards';
     });
 
     var buttonStateS = 0;
     sayoriButton.addEventListener('click', function(){
+        //chibiSayori.click();
+
         buttonStateS += 1;
 
         sayoriPoems.style.animationName = 'fadeOut';
@@ -463,6 +489,8 @@ window.onload = function(){
             sayoriPoems.style.animationFillMode = 'forwards';
 
             monikaPoems.innerHTML = '';
+            yuriPoems.innerHTML = '';
+            natsukiPoems.innerHTML = '';
         }, 520);
         
         if (buttonStateS == 1){
@@ -493,14 +521,135 @@ window.onload = function(){
         };
 
         sayoriButton.style.animationName = 'contrastIn';
-        sayoriButton.style.animationDuration = '.5s';
+        sayoriButton.style.animationDuration = '.1s';
         sayoriButton.style.animationFillMode = 'forwards';
 
         monikaButton.style.animationName = 'contrastOut';
-        monikaButton.style.animationDuration = '.5s';
+        monikaButton.style.animationDuration = '.1s';
         monikaButton.style.animationFillMode = 'forwards';
+
+        natsukiButton.style.animationName = 'contrastOut';
+        natsukiButton.style.animationDuration = '.1s';
+        natsukiButton.style.animationFillMode = 'forwards';
+
+        yuriButton.style.animationName = 'contrastOut';
+        yuriButton.style.animationDuration = '.1s';
+        yuriButton.style.animationFillMode = 'forwards';
     });
 
+    var buttonStateN = 0;
+    natsukiButton.addEventListener('click', function(){
+        //chibiNatsuki.click();
+
+        buttonStateN += 1;
+
+        natsukiPoems.style.animationName = 'fadeOut';
+        natsukiPoems.style.animationDuration = '.5s';
+        natsukiPoems.style.animationFillMode = 'forwards';
+
+
+        setTimeout(function(){
+            natsukiPoems.style.animationName = 'fadeIn';
+            natsukiPoems.style.animationDuration = '.5s';
+            natsukiPoems.style.animationFillMode = 'forwards';
+
+            monikaPoems.innerHTML = '';
+            sayoriPoems.innerHTML = '';
+            yuriPoems.innerHTML = '';
+        }, 520);
+        
+        if (buttonStateN == 1){
+            setTimeout(function(){
+                natsukiPoems.innerHTML = natsukiPoem1;
+            }, 520);
+        };
+
+        if (buttonStateN == 2){
+            setTimeout(function(){
+                natsukiPoems.innerHTML = natsukiPoem2;
+            }, 520);
+        };
+
+        if (buttonStateN == 3){
+            setTimeout(function(){
+                natsukiPoems.innerHTML = natsukiPoem3;
+            }, 520);
+            buttonStateN = 0;
+        };
+
+        sayoriButton.style.animationName = 'contrastOut';
+        sayoriButton.style.animationDuration = '.1s';
+        sayoriButton.style.animationFillMode = 'forwards';
+
+        monikaButton.style.animationName = 'contrastOut';
+        monikaButton.style.animationDuration = '.1s';
+        monikaButton.style.animationFillMode = 'forwards';
+
+        natsukiButton.style.animationName = 'contrastIn';
+        natsukiButton.style.animationDuration = '.1s';
+        natsukiButton.style.animationFillMode = 'forwards';
+
+        yuriButton.style.animationName = 'contrastOut';
+        yuriButton.style.animationDuration = '.1s';
+        yuriButton.style.animationFillMode = 'forwards';
+    });
+
+    var buttonStateY = 0;
+    yuriButton.addEventListener('click', function(){
+        //chibiYuri.click();
+
+        buttonStateY += 1;
+
+        yuriPoems.style.animationName = 'fadeOut';
+        yuriPoems.style.animationDuration = '.5s';
+        yuriPoems.style.animationFillMode = 'forwards';
+
+
+        setTimeout(function(){
+            yuriPoems.style.animationName = 'fadeIn';
+            yuriPoems.style.animationDuration = '.5s';
+            yuriPoems.style.animationFillMode = 'forwards';
+
+            monikaPoems.innerHTML = '';
+            sayoriPoems.innerHTML = '';
+            natsukiPoems.innerHTML = '';
+        }, 520);
+        
+        if (buttonStateY == 1){
+            setTimeout(function(){
+                yuriPoems.innerHTML = yuriPoem1;
+            }, 520);
+        };
+
+        if (buttonStateY == 2){
+            setTimeout(function(){
+                yuriPoems.innerHTML = yuriPoem2;
+            }, 520);
+        };
+
+        if (buttonStateY == 3){
+            setTimeout(function(){
+                yuriPoems.innerHTML = yuriPoem3;
+            }, 520);
+            buttonStateY = 0;
+        };
+
+        sayoriButton.style.animationName = 'contrastOut';
+        sayoriButton.style.animationDuration = '.1s';
+        sayoriButton.style.animationFillMode = 'forwards';
+
+        monikaButton.style.animationName = 'contrastOut';
+        monikaButton.style.animationDuration = '.1s';
+        monikaButton.style.animationFillMode = 'forwards';
+
+        natsukiButton.style.animationName = 'contrastOut';
+        natsukiButton.style.animationDuration = '.1s';
+        natsukiButton.style.animationFillMode = 'forwards';
+
+        yuriButton.style.animationName = 'contrastIn';
+        yuriButton.style.animationDuration = '.1s';
+        yuriButton.style.animationFillMode = 'forwards';
+    });
 
 
     //Bounce
