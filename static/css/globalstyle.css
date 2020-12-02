@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Calibri, Verdana, 'Sedgwick Ave', sans-serif;
+    font-family: Calibri, Verdana;
 }
 
 html, body{
@@ -11,7 +11,6 @@ html, body{
 
 body.preload *{
     animation-duration: 0s !important;
-    scroll-behavior: smooth;
 }
 
 .background{
@@ -169,12 +168,11 @@ section.main #sectionYuri{
 
 /*ASIDE*/
 aside{
-    margin-top: 50px;
-    margin-left: 50px;
+    margin: 50px 0 0 50px;
     display: inline-block;
     width: 12%;
-    vertical-align: top;
     text-align: center;
+    vertical-align: top;
 }
 
 aside h2{
@@ -202,22 +200,28 @@ section.poems{
     padding: 40px 0 40px 70px;
 }
 
-section.poems div#monikaPoems{
-    display: inline-block;
-}
-
-section.poems span{
-    font-size: 20px;
-    font-style: italic;
+section.poems h3{
+    font-size: 24px;
+    font-weight: normal;
+    font-family: cursive, Calibri;
 }
 
 section.poems p.body-poem{
     margin-left: 30px;
+    font-family: cursive, Calibri;
+    font-size: 16px;
+    line-height: 22px;
 }
 
-section.poems h3{
-    font-size: 28px;
-    font-weight: normal;
+section.poems div.poems-wrapper{
+    width: 730px;
+    height: 1024px;
+    display: inline-block;
+    background: url(../images/paper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 65px;
+    padding: 30px 15px 30px 15px;
 }
 /*SECTION POEMS*/
 
@@ -310,7 +314,6 @@ section.poems h3{
     }
 }
 
-
 @keyframes bounce{
     0%, 100%{
         transform: translateY(0);
@@ -335,5 +338,4 @@ section.poems h3{
         transform: scale(1.1);
     }
 }
-
 /*ANIMATION*/
