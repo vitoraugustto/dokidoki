@@ -4,9 +4,12 @@ window.onload = function(){
         document.body.className = '';
     }, 80);
 
+    //var song = new Audio('static/song/ddlcmusic.mpeg');
+    //song.play();
 
     const contentMain = document.getElementById('main');
     const background = document.getElementById('bg');
+    const screen = document.getElementById('screen');
 
     const logo = document.getElementById('logo');
     const chibiMonika = document.getElementById('chibi-monika');
@@ -84,6 +87,8 @@ window.onload = function(){
 
     var yuriPoem3 = '<h3>Praia</h3> <br> <p class="body-poem">Uma maravilha milhões de anos em construção. <br>Onde o útero da terra encontra caoticamente a superfície.<br> Sob um céu azul claro, uma vastidão de felicidade<br>Mas sob nuvens cinzentas, um enigma sem fim.<br>O mundo mais fácil no qual se perder<br>É aquele onde tudo pode ser encontrado.<br><br>Uma pessoa só pode construir um castelo de areia onde a areia esta molhada.<br>Mas onde a areia está molhada, a maré vem.<br>Irá ela lamber suavemente seus alicerces até você ceder?<br>Ou será que uma onda repentina o derrubará em um piscar de olhos?<br>De qualquer forma, o resultado é o mesmo.<br>Mesmo assim, nós ainda construímos castelos de areia.<br><br>Eu fico parada onde a espuma envolve meus tornozelos.<br>Onde meus dedos do pé afundam na areia.<br>O ar salgado é terapêutico.<br>A brisa é suave, mas poderosa.<br>Eu afundo meus dedos do pé na fronteira final, tentada pelas ondas espumosas.<br>Volte e eu abandono minha paz para me desgastar na costa.<br>Continue em frente e eu retorno para a Terra para sempre.<br></p>';
 
+    
+
     girls.addEventListener('mouseenter', function(){
         girls.style.animationName = 'slideToRightGirls';
         girls.style.animationDuration = '.5s';
@@ -156,7 +161,57 @@ window.onload = function(){
         }, 600)
     });
 
+    function randomChar(length) {
+        var result = '';
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%¨&*()_+<>:?^}`{';
+        var charactersLength = characters.length;
+        for(var i = 0; i < length; i++){
+           result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        };
+        return result;
+    };
+
+    var glitchedText = 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60) + '<br>' + 
+        randomChar(60);
+
+    var glitch = new Audio('static/song/jscare.mp3');
+    var counter = 0;
     chibiMonika.addEventListener('click', function(){
+        counter += 1;
+
+
+
+        if(counter ==5){
+            screen.style.display = 'block';
+            chibiMonika.style.opacity = '0';
+            monika.src = 'static/images/monikaglitch.png';
+            glitch.play();
+
+            setTimeout(function(){
+                screen.style.display = 'none';
+                chibiMonika.style.opacity = '1';
+            }, 200);
+        };
+
+        if(monika.getAttribute('src') == 'static/images/monikaglitch.png'){
+            monikaText.innerHTML = glitchedText;
+        };
+
         contentMain.style.animationName = 'fadeOut';
         contentMain.style.animationDuration = '.5s';
         contentMain.style.animationFillMode = 'forwards';
@@ -510,14 +565,15 @@ window.onload = function(){
                 sayoriPoems.innerHTML = sayoriPoem3;
             }, 520);
             buttonStateS = 0;
-
+            /*
             setTimeout(function(){
                 background.style.filter = 'invert(100%)';
             }, 1000);
             
             setTimeout(function(){
                 background.style.filter = 'invert(0%)';
-            }, 1100);
+            }, 5000);
+            */
         };
 
         sayoriButton.style.animationName = 'contrastIn';
