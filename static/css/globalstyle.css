@@ -9,9 +9,24 @@ html, body{
     height: auto;
 }
 
+#screen{
+    display: none;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/glitch2.gif);
+}
+
 body.preload *{
     animation-duration: 0s !important;
-}
+
+} /*../images/glitch2.gif*/
 
 .background{
     background: url(../images/newback.png);
@@ -220,7 +235,8 @@ section.poems div.poems-wrapper{
     background: url(../images/paper.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    margin-left: 65px;
+    margin-left: 30px;
+    box-shadow: 0px 0px 15px 1px;
     padding: 30px 15px 30px 15px;
 }
 /*SECTION POEMS*/
