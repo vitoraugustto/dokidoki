@@ -88,6 +88,65 @@ window.onload = function(){
     var yuriPoem3 = '<h3>Praia</h3> <br> <p class="body-poem">Uma maravilha milhões de anos em construção. <br>Onde o útero da terra encontra caoticamente a superfície.<br> Sob um céu azul claro, uma vastidão de felicidade<br>Mas sob nuvens cinzentas, um enigma sem fim.<br>O mundo mais fácil no qual se perder<br>É aquele onde tudo pode ser encontrado.<br><br>Uma pessoa só pode construir um castelo de areia onde a areia esta molhada.<br>Mas onde a areia está molhada, a maré vem.<br>Irá ela lamber suavemente seus alicerces até você ceder?<br>Ou será que uma onda repentina o derrubará em um piscar de olhos?<br>De qualquer forma, o resultado é o mesmo.<br>Mesmo assim, nós ainda construímos castelos de areia.<br><br>Eu fico parada onde a espuma envolve meus tornozelos.<br>Onde meus dedos do pé afundam na areia.<br>O ar salgado é terapêutico.<br>A brisa é suave, mas poderosa.<br>Eu afundo meus dedos do pé na fronteira final, tentada pelas ondas espumosas.<br>Volte e eu abandono minha paz para me desgastar na costa.<br>Continue em frente e eu retorno para a Terra para sempre.<br></p>';
 
     
+    function contentMainFadeOut(){
+        contentMain.style.animationName = 'fadeOut';
+        contentMain.style.animationDuration = '.5s';
+        contentMain.style.animationFillMode = 'forwards';
+    };
+
+    function sectionGirlsOut(){
+        girlsText.style.fontSize = '0px';
+        sectionGirls.style.height = '0px';
+        sectionGirls.style.width = '0px';
+    };
+
+    function sectionMonikaOut(){
+        monikaText.style.fontSize = '0px';
+        sectionMonika.style.height = '0px';
+        sectionMonika.style.width = '0px';
+
+        for (var i = 0; i < girlsM.length; i++){
+            girlsM[i].style.height = '0px',
+            girlsM[i].style.width = '0px';
+        };
+    };
+
+    function sectionSayoriOut(){
+        sayoriText.style.fontSize = '0px';
+        sectionSayori.style.height = '0px';
+        sectionSayori.style.width = '0px';
+
+        for (var i = 0; i < girlsS.length; i++){
+            girlsS[i].style.height = '0px',
+            girlsS[i].style.width = '0px';
+        };
+    };
+
+    function sectionNatsukiOut(){
+        natsukiText.style.fontSize = '0px';
+        sectionNatsuki.style.height = '0px';
+        sectionNatsuki.style.width = '0px';
+
+        for (var i = 0; i < girlsN.length; i++){
+            girlsN[i].style.height = '0px',
+            girlsN[i].style.width = '0px';
+        };
+    };
+
+    function sectionYuriOut(){
+        yuriText.style.fontSize = '0px';
+        sectionYuri.style.height = '0px';
+        sectionYuri.style.width = '0px';
+
+        for (var i = 0; i < girlsY.length; i++){
+            girlsY[i].style.height = '0px',
+            girlsY[i].style.width = '0px';
+        };
+    };
+
+
+
+
 
     girls.addEventListener('mouseenter', function(){
         girls.style.animationName = 'slideToRightGirls';
@@ -103,56 +162,24 @@ window.onload = function(){
         girlsText.style.width = '40%';
     });  
 
+    
+
     logo.addEventListener('click', function(){
-        contentMain.style.animationName = 'fadeOut';
-        contentMain.style.animationDuration = '.5s';
-        contentMain.style.animationFillMode = 'forwards';
+        contentMainFadeOut();
 
         background.style.background = 'url(static/images/newback.png)';
 
         setTimeout(function(){
-            girlsText.style.fontSize = '24px';
-            monikaText.style.fontSize = '0px';
-            sayoriText.style.fontSize = '0px';
-            natsukiText.style.fontSize = '0px';
-            yuriText.style.fontSize = '0px';
+            sectionMonikaOut();
+            sectionSayoriOut();
+            sectionNatsukiOut();
+            sectionYuriOut();
 
             contentMain.style.animationName = 'fadeIn';
 
+            girlsText.style.fontSize = '24px';
             sectionGirls.style.height ='auto';
             sectionGirls.style.width = 'auto';
-
-            sectionMonika.style.height = '0px';
-            sectionMonika.style.width = '0px';  
-
-            sectionSayori.style.height = '0px';
-            sectionSayori.style.width = '0px';  
-
-            sectionNatsuki.style.height = '0px';
-            sectionNatsuki.style.width = '0px';
-
-            sectionYuri.style.height = '0px';
-            sectionYuri.style.width = '0px';  
-
-            for (var i = 0; i < girlsM.length; i++){
-                girlsM[i].style.height = '0px',
-                girlsM[i].style.width = '0px';
-            };
-
-            for (var i = 0; i < girlsS.length; i++){
-                girlsS[i].style.height = '0px',
-                girlsS[i].style.width = '0px';
-            };
-
-            for (var i = 0; i < girlsN.length; i++){
-                girlsN[i].style.height = '0px',
-                girlsN[i].style.width = '0px';
-            };
-
-            for (var i = 0; i < girlsY.length; i++){
-                girlsY[i].style.height = '0px',
-                girlsY[i].style.width = '0px';
-            };
 
             girls.style.animationName = 'slideToRightGirls';
             girls.style.animationDuration = '.5s';
@@ -161,80 +188,26 @@ window.onload = function(){
         }, 600)
     });
 
-    function randomChar(length) {
-        var result = '';
-        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%¨&*()_+<>:?^}`{';
-        var charactersLength = characters.length;
-        for(var i = 0; i < length; i++){
-           result += characters.charAt(Math.floor(Math.random() * charactersLength));
-        };
-        return result;
-    };
-
-    var glitchedText = 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60) + '<br>' + 
-        randomChar(60);
-
     var glitch = new Audio('static/song/jscare.mp3');
     var counter = 0;
     chibiMonika.addEventListener('click', function(){
         counter += 1;
-
-
-
-        if(counter ==5){
-            screen.style.display = 'block';
-            chibiMonika.style.opacity = '0';
-            monika.src = 'static/images/monikaglitch.png';
-            glitch.play();
-
-            setTimeout(function(){
-                screen.style.display = 'none';
-                chibiMonika.style.opacity = '1';
-            }, 200);
-        };
-
-        if(monika.getAttribute('src') == 'static/images/monikaglitch.png'){
-            monikaText.innerHTML = glitchedText;
-        };
-
-        contentMain.style.animationName = 'fadeOut';
-        contentMain.style.animationDuration = '.5s';
-        contentMain.style.animationFillMode = 'forwards';
         background.style.background = 'url(static/images/monikabg.png)';
+        contentMainFadeOut();
 
         setTimeout(function(){
-            girlsText.style.fontSize = '0px';
-            monikaText.style.fontSize = '24px';
-            sayoriText.style.fontSize = '0px';
-            natsukiText.style.fontSize = '0px';
-            yuriText.style.fontSize = '0px';
+            sectionGirlsOut();
+            sectionSayoriOut();
+            sectionNatsukiOut();
+            sectionYuriOut();
 
             contentMain.style.animationName = 'fadeIn';
 
-            sectionGirls.style.height = '0px';
-            sectionGirls.style.width = '0px';
+            monika.style.animationName = 'slideToRightMonika';
+            monika.style.animationDuration = '.5s';
+            monika.style.animationFillMode = 'backwards';
 
-            sectionSayori.style.height = '0px';
-            sectionSayori.style.width = '0px';
-
-            sectionNatsuki.style.height = '0px';
-            sectionNatsuki.style.width = '0px';
-
+            monikaText.style.fontSize = '24px';
             sectionMonika.style.height = 'auto';
             sectionMonika.style.width = 'auto';
             
@@ -243,26 +216,25 @@ window.onload = function(){
                 girlsM[i].style.width = 'auto';
             };
 
-            for (var i = 0; i < girlsS.length; i++){
-                girlsS[i].style.height = '0px',
-                girlsS[i].style.width = '0px';
+            //Glitch Check
+            if(counter ==5){
+                screen.style.display = 'block';
+                chibiMonika.style.opacity = '0';
+                monika.src = 'static/images/monikaglitch.png';
+                glitch.play();
+
+                setTimeout(function(){
+                    screen.style.display = 'none';
+                    chibiMonika.style.opacity = '1';
+                }, 200);
             };
 
-            for (var i = 0; i < girlsN.length; i++){
-                girlsN[i].style.height = '0px',
-                girlsN[i].style.width = '0px';
+            if(monika.getAttribute('src') == 'static/images/monikaglitch.png'){
+                monikaText.innerHTML = '-9SIK98u-()dvU dWDWDWDU*WUWAEDERU#AUR$R(VMr $R#)@4I@) $R@ I05I B)%I#53)MI@)BMI 54i023IQ%$)23i5402B)I i 40m2$!$#!@%)(#@%*@#5823 5#)58 b S<Dsa a:><$e2. 4,32pQLp4~2 $@Q,4^LÇ2q ,54q~pçLf^PEQlf,as~dç,.<A,<a<A<,A< < a< ,@< @â< ç$<%@a<%ç<A< < <@#%$ ka#@²3Q5 0k#@%)#kq q#3# k%#p  5k##qpa^p%#k  k%#ap^k%p#a^%k#a_<a#<<<a, a#@p$kl#ap)_kl #ap <,a ,A<a< #@_alR4 a#l_{L3%^prl #)pk#%r<< #ak)ka%k K)k% k%k<< a< <a<#a<a# p_)K5L3)aK pKLa> a .A>.a#P-0LK #a <#ap< okja #ak #)ak5 30Ak03kar%)#kak53A)k 3)ak A0k apLEKAoKR#r%a%#%q@k 3Kqa^$r#a ok#a% %3a%3k%#) %#)kaak ak#K3Ak 3A%rp#)k%tyklrdpyKL%yed&y <,D,D,5, D5,5ap#lk3AP5lk5KA3AkKAkp$ kak po 4#ok4 O#akOAk KOak oKOK -0i324r3q$%#Q$I3q %)$3iq%ibq#53Qi%#)q95V#qRTWT iw4b%¨$#i5w#$I%B3wI 53WI53Iwb5I#w b%i#w5I3WB%i3wI%3W%iW35 3WI53W5#w%i# W5bi#W%IB3w%I';
             };
-
-            for (var i = 0; i < girlsY.length; i++){
-                girlsY[i].style.height = '0px',
-                girlsY[i].style.width = '0px';
-            };
-
-            monika.style.animationName = 'slideToRightMonika';
-            monika.style.animationDuration = '.5s';
-            monika.style.animationFillMode = 'backwards';
-
         }, 600)
+
+
     });
 
     monika.addEventListener('animationend', function(){
@@ -275,57 +247,29 @@ window.onload = function(){
     });
 
     chibiSayori.addEventListener('click', function(){
-        contentMain.style.animationName = 'fadeOut';
-        contentMain.style.animationDuration = '.5s';
-        contentMain.style.animationFillMode = 'forwards';
-        
         background.style.background = 'url(static/images/sayoribg.png)';
+        contentMainFadeOut();        
 
         setTimeout(function(){
-            girlsText.style.fontSize = '0px';
-            monikaText.style.fontSize = '0px';
-            sayoriText.style.fontSize = '24px';
-            natsukiText.style.fontSize = '0px';
-            yuriText.style.fontSize = '0px';
-
             contentMain.style.animationName = 'fadeIn';
-            
-            sectionGirls.style.height = '0px';
-            sectionGirls.style.width = '0px';
 
-            sectionMonika.style.height = '0px';
-            sectionMonika.style.width = '0px';
+            sectionGirlsOut();
+            sectionMonikaOut();
+            sectionNatsukiOut();
+            sectionYuriOut();
+                        
+            sayori.style.animationName = 'slideToRightSayori';
+            sayori.style.animationDuration = '.5s';
+            sayori.style.animationFillMode = 'backwards';
 
-            sectionYuri.style.height = '0px';
-            sectionYuri.style.width = '0px';
-
+            sayoriText.style.fontSize = '24px';
             sectionSayori.style.height = 'auto';
             sectionSayori.style.width = 'auto';
-
-            for (var i = 0; i < girlsM.length; i++){
-                girlsM[i].style.height = '0px',
-                girlsM[i].style.width = '0px';
-            };
-
-            for (var i = 0; i < girlsN.length; i++){
-                girlsN[i].style.height = '0px',
-                girlsN[i].style.width = '0px';
-            };
-
-            for (var i = 0; i < girlsY.length; i++){
-                girlsY[i].style.height = '0px',
-                girlsY[i].style.width = '0px';
-            };
 
             for (var i = 0; i < girlsS.length; i++){
                 girlsS[i].style.height = '800px',
                 girlsS[i].style.width = 'auto';
             };
-            
-            sayori.style.animationName = 'slideToRightSayori';
-            sayori.style.animationDuration = '.5s';
-            sayori.style.animationFillMode = 'backwards';
-
         }, 600)
     });
     
@@ -339,58 +283,28 @@ window.onload = function(){
     });
 
     chibiNatsuki.addEventListener('click', function(){
-        contentMain.style.animationName = 'fadeOut';
-        contentMain.style.animationDuration = '.5s';
-        contentMain.style.animationFillMode = 'forwards';
         background.style.background = 'url(static/images/natsukibg.png)';
+        contentMainFadeOut();
 
         setTimeout(function(){
-            girlsText.style.fontSize = '0px';
-            monikaText.style.fontSize = '0px';
-            sayoriText.style.fontSize = '0px';
-            natsukiText.style.fontSize = '24px';
-            yuriText.style.fontSize = '0px';
+            sectionGirlsOut();
+            sectionMonikaOut();
+            sectionSayoriOut();
+            sectionYuriOut();
 
             contentMain.style.animationName = 'fadeIn';
-            
-            sectionGirls.style.height = '0px';
-            sectionGirls.style.width = '0px';
-
-            sectionMonika.style.height = '0px';
-            sectionMonika.style.width = '0px';
-
-            sectionSayori.style.height = '0px';
-            sectionSayori.style.width = '0px';
-
-            sectionYuri.style.height = '0px';
-            sectionYuri.style.width = '0px';
-
-            sectionNatsuki.style.height = 'auto';
-            sectionNatsuki.style.width = 'auto';
-
-            for (var i = 0; i < girlsM.length; i++){
-                girlsM[i].style.height = '0px',
-                girlsM[i].style.width = '0px';
-            };
-
-            for (var i = 0; i < girlsS.length; i++){
-                girlsS[i].style.height = '0px',
-                girlsS[i].style.width = '0px';
-            };
-
-            for (var i = 0; i < girlsN.length; i++){
-                girlsN[i].style.height = '800px',
-                girlsN[i].style.width = 'auto';
-            };
-
-            for (var i = 0; i < girlsY.length; i++){
-                girlsY[i].style.height = '0px',
-                girlsY[i].style.width = '0px';
 
             natsuki.style.animationName = 'slideToRightNatsuki';
             natsuki.style.animationDuration = '.5s';
             natsuki.style.animationFillMode = 'backwards';
 
+            natsukiText.style.fontSize = '24px';
+            sectionNatsuki.style.height = 'auto';
+            sectionNatsuki.style.width = 'auto';
+
+            for (var i = 0; i < girlsN.length; i++){
+                girlsN[i].style.height = '800px',
+                girlsN[i].style.width = 'auto';
             };
         }, 600)
     });
@@ -405,58 +319,29 @@ window.onload = function(){
     });
 
     chibiYuri.addEventListener('click', function(){
-        contentMain.style.animationName = 'fadeOut';
-        contentMain.style.animationDuration = '.5s';
-        contentMain.style.animationFillMode = 'forwards';
+        contentMainFadeOut();
+
         background.style.background = 'url(static/images/yuribg.png)';
 
         setTimeout(function(){
-            girlsText.style.fontSize ='0px';
-            monikaText.style.fontSize = '0px';
-            sayoriText.style.fontSize = '0px';
-            natsukiText.style.fontSize = '0px';
-            yuriText.style.fontSize = '24px';
+            sectionGirlsOut();
+            sectionMonikaOut();
+            sectionSayoriOut();
+            sectionNatsukiOut();
 
             contentMain.style.animationName = 'fadeIn';
-            
-            sectionGirls.style.height = '0px';
-            sectionGirls.style.width = '0px';
-
-            sectionMonika.style.height = '0px';
-            sectionMonika.style.width = '0px';
-
-            sectionNatsuki.style.height = '0px';
-            sectionNatsuki.style.width = '0px';
-
-            sectionSayori.style.height = '0px';
-            sectionSayori.style.width = '0px';
-
-            sectionYuri.style.height = 'auto';
-            sectionYuri.style.width = 'auto';
-
-            for (var i = 0; i < girlsM.length; i++){
-                girlsM[i].style.height = '0px',
-                girlsM[i].style.width = '0px';
-            };
-
-            for (var i = 0; i < girlsN.length; i++){
-                girlsN[i].style.height = '0px',
-                girlsN[i].style.width = '0px';
-            };
-
-            for (var i = 0; i < girlsS.length; i++){
-                girlsS[i].style.height = '0px',
-                girlsS[i].style.width = '0px';
-            };
-
-            for (var i = 0; i < girlsY.length; i++){
-                girlsY[i].style.height = '800px',
-                girlsY[i].style.width = 'auto';
 
             yuri.style.animationName = 'slideToRightYuri';
             yuri.style.animationDuration = '.5s';
             yuri.style.animationFillMode = 'backwards';
 
+            yuriText.style.fontSize = '24px';
+            sectionYuri.style.height = 'auto';
+            sectionYuri.style.width = 'auto';
+
+            for (var i = 0; i < girlsY.length; i++){
+                girlsY[i].style.height = '800px',
+                girlsY[i].style.width = 'auto';
             };
         }, 600)
     });
@@ -473,9 +358,7 @@ window.onload = function(){
     monikaPoems.innerHTML = monikaPoem1;
     var buttonStateM = 1;
     monikaButton.addEventListener('click', function(){
-        //chibiMonika.click();
-
-        buttonStateM += 1;
+    buttonStateM += 1;
 
         monikaPoems.style.animationName = 'fadeOut';
         monikaPoems.style.animationDuration = '.5s';
@@ -495,42 +378,29 @@ window.onload = function(){
             setTimeout(function(){
                 monikaPoems.innerHTML = monikaPoem1;
             }, 520);
-        };
-
-        if (buttonStateM == 2){
+        } else if (buttonStateM == 2){
             setTimeout(function(){
                 monikaPoems.innerHTML = monikaPoem2;
             }, 520);
-        };
-
-        if (buttonStateM == 3){
+        } else if (buttonStateM == 3){
             setTimeout(function(){
                 monikaPoems.innerHTML = monikaPoem3;
             }, 520);
             buttonStateM = 0;
         };
 
-        sayoriButton.style.animationName = 'contrastOut';
-        sayoriButton.style.animationDuration = '.1s';
-        sayoriButton.style.animationFillMode = 'forwards';
+        [sayoriButton, natsukiButton, yuriButton].forEach((buttons) => 
+        [buttons.style.animationName = 'contrastOut',
+        buttons.style.animationDuration = '.1s',
+        buttons.style.animationFillMode = 'forwards']);
 
         monikaButton.style.animationName = 'contrastIn';
         monikaButton.style.animationDuration = '.1s';
         monikaButton.style.animationFillMode = 'forwards';
-
-        natsukiButton.style.animationName = 'contrastOut';
-        natsukiButton.style.animationDuration = '.1s';
-        natsukiButton.style.animationFillMode = 'forwards';
-
-        yuriButton.style.animationName = 'contrastOut';
-        yuriButton.style.animationDuration = '.1s';
-        yuriButton.style.animationFillMode = 'forwards';
     });
 
     var buttonStateS = 0;
     sayoriButton.addEventListener('click', function(){
-        //chibiSayori.click();
-
         buttonStateS += 1;
 
         sayoriPoems.style.animationName = 'fadeOut';
@@ -552,51 +422,29 @@ window.onload = function(){
             setTimeout(function(){
                 sayoriPoems.innerHTML = sayoriPoem1;
             }, 520);
-        };
-
-        if (buttonStateS == 2){
+        } else if (buttonStateS == 2){
             setTimeout(function(){
                 sayoriPoems.innerHTML = sayoriPoem2;
             }, 520);
-        };
-
-        if (buttonStateS == 3){
+        } else if (buttonStateS == 3){
             setTimeout(function(){
                 sayoriPoems.innerHTML = sayoriPoem3;
             }, 520);
             buttonStateS = 0;
-            /*
-            setTimeout(function(){
-                background.style.filter = 'invert(100%)';
-            }, 1000);
-            
-            setTimeout(function(){
-                background.style.filter = 'invert(0%)';
-            }, 5000);
-            */
         };
+
+        [monikaButton, natsukiButton, yuriButton].forEach((buttons) => 
+        [buttons.style.animationName = 'contrastOut',
+        buttons.style.animationDuration = '.1s',
+        buttons.style.animationFillMode = 'forwards']);
 
         sayoriButton.style.animationName = 'contrastIn';
         sayoriButton.style.animationDuration = '.1s';
         sayoriButton.style.animationFillMode = 'forwards';
-
-        monikaButton.style.animationName = 'contrastOut';
-        monikaButton.style.animationDuration = '.1s';
-        monikaButton.style.animationFillMode = 'forwards';
-
-        natsukiButton.style.animationName = 'contrastOut';
-        natsukiButton.style.animationDuration = '.1s';
-        natsukiButton.style.animationFillMode = 'forwards';
-
-        yuriButton.style.animationName = 'contrastOut';
-        yuriButton.style.animationDuration = '.1s';
-        yuriButton.style.animationFillMode = 'forwards';
     });
 
     var buttonStateN = 0;
     natsukiButton.addEventListener('click', function(){
-        //chibiNatsuki.click();
-
         buttonStateN += 1;
 
         natsukiPoems.style.animationName = 'fadeOut';
@@ -618,42 +466,29 @@ window.onload = function(){
             setTimeout(function(){
                 natsukiPoems.innerHTML = natsukiPoem1;
             }, 520);
-        };
-
-        if (buttonStateN == 2){
+        } else if (buttonStateN == 2){
             setTimeout(function(){
                 natsukiPoems.innerHTML = natsukiPoem2;
             }, 520);
-        };
-
-        if (buttonStateN == 3){
+        } else if (buttonStateN == 3){
             setTimeout(function(){
                 natsukiPoems.innerHTML = natsukiPoem3;
             }, 520);
             buttonStateN = 0;
         };
 
-        sayoriButton.style.animationName = 'contrastOut';
-        sayoriButton.style.animationDuration = '.1s';
-        sayoriButton.style.animationFillMode = 'forwards';
-
-        monikaButton.style.animationName = 'contrastOut';
-        monikaButton.style.animationDuration = '.1s';
-        monikaButton.style.animationFillMode = 'forwards';
+        [sayoriButton, monikaButton, yuriButton].forEach((buttons) => 
+        [buttons.style.animationName = 'contrastOut',
+        buttons.style.animationDuration = '.1s',
+        buttons.style.animationFillMode = 'forwards']);
 
         natsukiButton.style.animationName = 'contrastIn';
         natsukiButton.style.animationDuration = '.1s';
         natsukiButton.style.animationFillMode = 'forwards';
-
-        yuriButton.style.animationName = 'contrastOut';
-        yuriButton.style.animationDuration = '.1s';
-        yuriButton.style.animationFillMode = 'forwards';
     });
 
     var buttonStateY = 0;
     yuriButton.addEventListener('click', function(){
-        //chibiYuri.click();
-
         buttonStateY += 1;
 
         yuriPoems.style.animationName = 'fadeOut';
@@ -675,41 +510,29 @@ window.onload = function(){
             setTimeout(function(){
                 yuriPoems.innerHTML = yuriPoem1;
             }, 520);
-        };
-
-        if (buttonStateY == 2){
+        } else if (buttonStateY == 2){
             setTimeout(function(){
                 yuriPoems.innerHTML = yuriPoem2;
             }, 520);
-        };
-
-        if (buttonStateY == 3){
+        } else if (buttonStateY == 3){
             setTimeout(function(){
                 yuriPoems.innerHTML = yuriPoem3;
             }, 520);
             buttonStateY = 0;
         };
 
-        sayoriButton.style.animationName = 'contrastOut';
-        sayoriButton.style.animationDuration = '.1s';
-        sayoriButton.style.animationFillMode = 'forwards';
-
-        monikaButton.style.animationName = 'contrastOut';
-        monikaButton.style.animationDuration = '.1s';
-        monikaButton.style.animationFillMode = 'forwards';
-
-        natsukiButton.style.animationName = 'contrastOut';
-        natsukiButton.style.animationDuration = '.1s';
-        natsukiButton.style.animationFillMode = 'forwards';
+        [sayoriButton, monikaButton, natsukiButton].forEach((buttons) => 
+        [buttons.style.animationName = 'contrastOut',
+        buttons.style.animationDuration = '.1s',
+        buttons.style.animationFillMode = 'forwards']);
 
         yuriButton.style.animationName = 'contrastIn';
         yuriButton.style.animationDuration = '.1s';
         yuriButton.style.animationFillMode = 'forwards';
     });
 
-
     //Bounce
-    girls.addEventListener('click', function(){
+    function bounceAnimation(event){
         for(var i = 0; i < bounce.length; i++){
             bounce[i].style.animationName = 'bounce',
             bounce[i].style.animationDuration = '.3s',
@@ -721,62 +544,9 @@ window.onload = function(){
                 bounce[i].style.animationName = '';
             };
         }, 1050);
-    });
+    };
 
-    monika.addEventListener('click', function(){
-        for(var i = 0; i < bounce.length; i++){
-            bounce[i].style.animationName = 'bounce',
-            bounce[i].style.animationDuration = '.3s',
-            bounce[i].style.animationFillMode = 'forwards';
-        };
-       
-        setTimeout(function(){
-            for(var i = 0; i < bounce.length; i++){
-                bounce[i].style.animationName = '';
-            };
-        }, 1050);
-    });
-
-    sayori.addEventListener('click', function(){
-        for(var i = 0; i < bounce.length; i++){
-            bounce[i].style.animationName = 'bounce',
-            bounce[i].style.animationDuration = '.3s',
-            bounce[i].style.animationFillMode = 'forwards';
-        };
-       
-        setTimeout(function(){
-            for(var i = 0; i < bounce.length; i++){
-                bounce[i].style.animationName = '';
-            };
-        }, 1050);
-    });
-
-    natsuki.addEventListener('click', function(){
-        for(var i = 0; i < bounce.length; i++){
-            bounce[i].style.animationName = 'bounce',
-            bounce[i].style.animationDuration = '.3s',
-            bounce[i].style.animationFillMode  ='forwards';
-        };
-       
-        setTimeout(function(){
-            for(var i = 0; i < bounce.length; i++){
-                bounce[i].style.animationName = '';
-            };
-        }, 1050);
-    });
-
-    yuri.addEventListener('click', function(){
-        for(var i = 0; i < bounce.length; i++){
-            bounce[i].style.animationName = 'bounce',
-            bounce[i].style.animationDuration = '.3s',
-            bounce[i].style.animationFillMode = 'forwards';
-        };
-       
-        setTimeout(function(){
-            for(var i = 0; i < bounce.length; i++){
-                bounce[i].style.animationName = '';
-            };
-        }, 1050);
-    });    
-
+    [girls, monika, sayori, natsuki, yuri].forEach((characters) => 
+        characters.addEventListener('click', bounceAnimation));
+ 
 };
