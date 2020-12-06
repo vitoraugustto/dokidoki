@@ -9,6 +9,7 @@ html, body{
     height: auto;
 }
 
+/*GENERAL*/
 #screen{
     display: none;
     position: fixed;
@@ -26,7 +27,7 @@ html, body{
 body.preload *{
     animation-duration: 0s !important;
 
-} /*../images/glitch2.gif*/
+}
 
 .background{
     background: url(../images/newback.png);
@@ -69,6 +70,26 @@ body.preload *{
     width: auto;
     background: linear-gradient(#FFBACD, #FC86AA);
 }
+
+.fadeIn{
+    animation-name: fadeIn;
+    animation-duration: .5s;
+    animation-fill-mode: backwards;
+}
+
+.fadeOut{
+    animation-name: fadeOut;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.bounceAnimation{
+    animation-name: bounce;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+/*GENERAL*/
+
 
 /*HEADER*/
 header{
