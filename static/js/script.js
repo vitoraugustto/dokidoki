@@ -4,12 +4,10 @@ window.onload = function(){
         document.body.className = '';
     }, 80);
 
-    //var song = new Audio('static/song/ddlcmusic.mpeg');
-    //song.play();
-
     const contentMain = document.getElementById('main');
     const background = document.getElementById('bg');
     const screen = document.getElementById('screen');
+    const bounce = document.getElementsByClassName('bounce');
 
     const logo = document.getElementById('logo');
     const chibiMonika = document.getElementById('chibi-monika');
@@ -39,8 +37,6 @@ window.onload = function(){
     const girlsS = document.getElementsByClassName('girlsS');
     const girlsN = document.getElementsByClassName('girlsN');
     const girlsY = document.getElementsByClassName('girlsY');
-
-    const bounce = document.getElementsByClassName('bounce');
 
     const monikaButton = document.getElementById('monikaButton');
     const sayoriButton = document.getElementById('sayoriButton');
