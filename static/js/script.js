@@ -219,7 +219,7 @@ window.onload = function(){
                 setTimeout(function(){
                     screen.style.display = 'none';
                     chibiMonika.style.opacity = '1';
-                }, 200);
+                }, 1500);
             };
 
             if(monika.getAttribute('src') == 'static/images/monikaglitch.png'){
