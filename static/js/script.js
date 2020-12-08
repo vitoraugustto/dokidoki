@@ -211,10 +211,13 @@ window.onload = function(){
 
             //Glitch Check
             if(glitchCounter == 5){
-                screen.style.display = 'block';
-                chibiMonika.style.opacity = '0';
-                monika.src = 'static/images/monikaglitch.png';
-                glitch.play();
+                setTimeout(function(){
+                    screen.style.display = 'block';
+                    chibiMonika.style.opacity = '0';
+                    monika.src = 'static/images/monikaglitch.png';
+                    glitch.play();
+                }, 1200);
+                
 
                 setTimeout(function(){
                     screen.style.display = 'none';
