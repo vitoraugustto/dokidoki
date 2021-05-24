@@ -3,80 +3,45 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="static/css/globalstyle.css">
-        <link rel="preload" href="static/css/globalstyle.css" as="style">
-        <link rel="preload" href="static/js/script.js" as="script">
+        <link rel="stylesheet" href="static/css/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet" />
         <title>Doki Doki!</title>
     </head>
     <body class="preload">
-        <div id="screen"></div>
-        <div id="bg" class="background">
+        <div id="glitchScreen"></div>
+        <div id="bg">
             <div class="container">
                 <header>
-                    <audio src="static/song/ddlcmusic.mpeg" autoplay loop></audio>
                     <img id="logo" class="logo" src="static/images/dokidokilogo.png">
                     <nav>
                         <ul class="menu">
-                            <li><img id="chibi-monika" class="chibi" src="static/images/chibimonika.png"></li>
-                            <li><img id="chibi-sayori" class="chibi" src="static/images/chibisayori.png"></li>
-                            <li><img id="chibi-natsuki" class="chibi" src="static/images/chibinatsuki.png"></li>
-                            <li><img id="chibi-yuri" class="chibi" src="static/images/chibiyuri.png"></li>
+                            <li><img id="chibiMonika" class="chibi" src="static/images/chibimonika.png"></li>
+                            <li><img id="chibiSayori" class="chibi" src="static/images/chibisayori.png"></li>
+                            <li><img id="chibiNatsuki" class="chibi" src="static/images/chibinatsuki.png"></li>
+                            <li><img id="chibiYuri" class="chibi" src="static/images/chibiyuri.png"></li>
                         </ul>
                 </header>
-                <section id="main" class="main">
-                    <section class="sections" id="sectionGirls">
-                        <p id="girlsText" class="text"></p>
-                        <div class="bounce"><img id="girls" class="girls" src="static/images/girls.png"></div>
+                <main>
+                    <section id="girlsSection">
+                        <p id="text"></p>
+                        <div id="girlsWrapper"><img id="girls" src="static/images/girlsmain.png"></div>
                     </section>
-                    <section class="sections" id="sectionMonika">
-                        <p id="monikaText" class="text"></p>
-                        <div class="bounce"><img id="monika" class="girlsM" src="static/images/monikamain.png"></div>
-                    </section>
-                    <section class="sections" id="sectionSayori">
-                        <p id="sayoriText" class="text"></p>
-                        <div class="bounce"><img id="sayori" class="girlsS" src="static/images/sayorimain.png"></div>
-                    </section>
-                    <section class="sections" id="sectionNatsuki">
-                        <p id="natsukiText" class="text"></p>
-                        <div class="bounce"><img id="natsuki" class="girlsN" src="static/images/natsukimain.png"></div>
-                    </section>
-                    <section class="sections" id="sectionYuri">
-                        <p id="yuriText" class="text"></p>
-                        <div class="bounce"><img id="yuri" class="girlsY" src="static/images/yurimain.png"></div>
-                    </section>
-                </section>
+                </main>
                 <div class="division"></div>
-                <section class="box-poems">
+                <section class="section-poems">
                     <aside>
-                        <div class="poems-wrapper" id="poems-wrapper">
-                            <h2>poemas</h2>
-                            <ul id="aside-poems" class="aside-poems">
-                                <li id="monikaButton" class="button">Monika</li>
-                                <li id="sayoriButton" class="button">Sayori</li>
-                                <li id="natsukiButton" class="button">Natsuki</li>
-                                <li id="yuriButton" class="button">Yuri</li>
-                            </ul>
-                        </div>
+                        <h2>poemas</h2>
+                        <ul class="aside-poems">
+                            <li id="monikaButton" class="button">Monika</li>
+                            <li id="sayoriButton" class="button">Sayori</li>
+                            <li id="natsukiButton" class="button">Natsuki</li>
+                            <li id="yuriButton" class="button">Yuri</li>
+                        </ul>
                     </aside>
-                    <section class="poems">
-                        <div id="poems-wrapper" class="poems-wrapper">
-                            <div id="monikaPoems">
-                                <!--Dinamic poem-->
-                            </div>
-                            <div id="sayoriPoems">
-                                <!--Dinamic poem-->
-                            </div>
-                            <div id="natsukiPoems">
-                                <!--Dinamic poem-->
-                            </div>
-                            <div id="yuriPoems">
-                                <!--Dinamic poem-->
-                            </div>
-                        </div>
-                    </section>
+
+                    <p class="in-progress">Em andamento #JustMonika</p>
                 </section>
                 <div class="division"></div>
             </div>

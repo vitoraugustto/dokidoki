@@ -1,0 +1,256 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Calibri, Verdana;
+}
+
+html,
+body {
+  height: auto;
+}
+
+/*GENERAL*/
+#glitchScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/glitch.gif);
+}
+
+body.preload * {
+  animation-duration: 0s !important;
+}
+
+#bg {
+  background-image: url(../images/girlsbg.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  height: 100%;
+  box-shadow: 0px 0px 40px;
+  padding: 10px 0 0 0;
+  background-color: #fff7fe;
+  overflow-x: hidden;
+}
+
+.button {
+  background: #ffe6f4;
+  color: black;
+  padding: 7px 25px;
+  border: 3px solid #ffbde1;
+  transition: transform 0.1s;
+}
+
+.button:hover {
+  transform: scale(1.3);
+}
+
+.sections {
+  display: inline-block;
+}
+
+.division {
+  height: 142px;
+  width: auto;
+  background: linear-gradient(#ffbacd, #fc86aa);
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s backwards;
+}
+
+.fadeOut {
+  animation: fadeOut 0.5s forwards;
+}
+
+.bounce {
+  animation: bounce 0.4s forwards;
+}
+
+.slideToRight {
+  animation: slideToRight 0.4s forwards ease;
+}
+/*GENERAL*/
+
+/*HEADER*/
+header {
+  text-align: center;
+}
+
+header nav {
+  background: linear-gradient(#ffbacd, #fc86aa);
+  margin: 10px 0;
+  padding: 5px 0;
+}
+
+header img.logo {
+  height: 256px;
+  cursor: pointer;
+}
+
+header img.logo:hover {
+  animation: zoom 0.7s forwards;
+}
+
+header img.chibi {
+  height: 128px;
+  cursor: pointer;
+  transition: 0.3s transform ease;
+}
+
+header img.chibi:hover {
+  transform: scale(1.3);
+}
+
+header ul {
+  display: inline-block;
+}
+
+header ul li {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+header ul li:last-child {
+  margin: 0;
+}
+
+/*HEADER*/
+
+/*SECTION MAIN*/
+main {
+  width: 100%;
+  min-height: 500px;
+  text-align: center;
+  transition: 0.5s min-height ease;
+}
+
+main img#girls {
+  position: absolute;
+  top: 0;
+  left: 270px;
+  max-height: 1000px;
+
+  cursor: pointer;
+}
+
+main p#text {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+
+  opacity: 0;
+  text-align: justify;
+  font-size: 1.5em;
+  width: 36%;
+}
+
+main section#girlsSection {
+  position: relative;
+}
+
+/*SECTION MAIN*/
+
+/*ASIDE*/
+aside {
+  margin: 50px;
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  vertical-align: top;
+}
+
+aside h2 {
+  text-transform: uppercase;
+}
+
+aside ul.aside-poems {
+  list-style-type: none;
+}
+
+aside ul.aside-poems li {
+  font-size: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+section.section-poems {
+  display: flex;
+}
+
+p.in-progress {
+  display: inline-block;
+  align-self: center;
+  justify-self: center;
+  width: 70%;
+  text-align: center;
+  font-size: 50px;
+}
+/*ASIDE*/
+
+/*ANIMATION*/
+@keyframes slideToRight {
+  0% {
+    left: 270px;
+  }
+
+  100% {
+    left: 520px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes zoom {
+  0%,
+  50%,
+  100% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  75% {
+    transform: scale(1.1);
+  }
+}
+/*ANIMATION*/
